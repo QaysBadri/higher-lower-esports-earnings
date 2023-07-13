@@ -8,7 +8,7 @@ body::before {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background-image: url("nuke-background.png");
+  background-image: url("Images/nuke-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -28,7 +28,7 @@ body {
 
 /* #front-page {
   position: fixed;
-  background-image: url("nuke-background.png");
+  background-image: url("Images/nuke-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -286,7 +286,7 @@ body {
   left: 0px;
   width: 300px;
   height: 100vh;
-  background: url("logo.svg");
+  background: url("Images\logo.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
