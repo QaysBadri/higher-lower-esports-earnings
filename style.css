@@ -38,7 +38,6 @@ body {
 } */
 
 #circle {
-  /* background: rgba(27, 27, 27, 1); */
   background: #25252a;
   border-radius: 50%;
   width: 120px;
@@ -82,8 +81,6 @@ body {
   height: 100vh;
   object-fit: cover;
   z-index: -1;
-  /* Need to gray out the background instead of blurring */
-  /* grayscale isn't what im looking for */
   filter: blur(2px);
 }
 
@@ -95,8 +92,6 @@ body {
   height: 100vh;
   object-fit: cover;
   z-index: -1;
-  /* Need to gray out the background instead of blurring */
-  /* grayscale isn't what im looking for */
   filter: blur(2px);
 }
 
