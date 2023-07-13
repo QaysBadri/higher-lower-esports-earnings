@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap");
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("nuke-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(20px);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  color: azure;
+}
+
+/* #front-page {
+  position: fixed;
+  background-image: url("nuke-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(20px);
+  z-index: 100;
+} */
+
+#circle {
+  /* background: rgba(27, 27, 27, 1); */
+  background: #25252a;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  z-index: 1;
+}
+
+#inner-circle {
+  color: silver;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 40px;
+  z-index: 1;
+}
+
+#high-score {
+  position: fixed;
+  bottom: 1%;
+  left: 1%;
+  font-size: 35px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#score {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  font-size: 35px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#left-panel {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  /* Need to gray out the background instead of blurring */
+  /* grayscale isn't what im looking for */
+  filter: blur(2px);
+}
+
+#right-panel {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  /* Need to gray out the background instead of blurring */
+  /* grayscale isn't what im looking for */
+  filter: blur(2px);
+}
+
+.player-handle-color {
+  color: #a7900d;
+}
+
+#left-name {
+  position: fixed;
+  top: 40%;
+  left: 25%;
+  font-size: 70px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transform: translateX(-50%);
+  transform-origin: center;
+}
+
+#right-name {
+  position: fixed;
+  top: 40%;
+  right: 25%;
+  font-size: 70px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transform: translateX(50%);
+  transform-origin: center;
+}
+
+#left-has {
+  position: fixed;
+  top: 47%;
+  left: 25%;
+  font-size: 25px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transform: translateX(-50%);
+  transform-origin: center;
+}
+
+#right-has {
+  position: fixed;
+  top: 47%;
+  right: 25%;
+  font-size: 25px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transform: translateX(50%);
+  transform-origin: center;
+}
+
+#left-earnings {
+  position: fixed;
+  top: 49%;
+  left: 25%;
+  font-size: 90px;
+  color: #396d14;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transform: translateX(-50%);
+  transform-origin: center;
+}
+
+#right-earnings {
+  position: fixed;
+  top: 49%;
+  right: 25%;
+  font-size: 120px;
+  color: #396d14;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transform: translateX(50%);
+  transform-origin: center;
+}
+
+#left-bottom-text {
+  position: fixed;
+  top: 58%;
+  left: 25%;
+  font-size: 25px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transform: translateX(-50%);
+  transform-origin: center;
+}
+
+#right-bottom-text {
+  position: fixed;
+  top: 60%;
+  right: 25%;
+  font-size: 25px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transform: translateX(50%);
+  transform-origin: center;
+}
+
+#higher-button {
+  position: fixed;
+  background-color: #25252a;
+  color: white;
+  width: 200px;
+  height: 60px;
+  border-radius: 4px;
+  top: 50%;
+  right: 25%;
+  font-size: 1.7rem;
+  font-family: "Source Sans 3", sans-serif;
+  transform: translateX(50%);
+  transform-origin: center;
+  transition: ease-out 0.3s;
+  border: 3px solid #396d14;
+  z-index: 1;
+}
+
+#higher-button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+#higher-button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #396d14;
+}
+
+#higher-button:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+#lower-button {
+  position: fixed;
+  width: 200px;
+  height: 60px;
+  color: white;
+  border-radius: 4px;
+  background-color: #25252a;
+  top: 55%;
+  right: 25%;
+  font-size: 1.7rem;
+  font-family: "Source Sans 3", sans-serif;
+  transform: translateX(50%);
+  transform-origin: center;
+  border: 3px solid #9e180c;
+  z-index: 1;
+  transition: ease-out 0.3s;
+}
+
+#lower-button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+#lower-button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #9e180c;
+}
+
+#lower-button:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+/* #logo {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100vh;
+  background: url("logo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 101;
+}
+
+#csgo-button {
+  position: fixed;
+  width: 200px;
+  height: 60px;
+  color: white;
+  border-radius: 4px;
+  background-color: #25252a;
+  top: 55%;
+  right: 25%;
+  font-size: 1.7rem;
+  font-family: "Source Sans 3", sans-serif;
+  transform: translateX(50%);
+  transform-origin: center;
+  border: 3px solid #9e180c;
+  z-index: 101;
+  transition: ease-out 0.3s;
+}
+
+#csgo-button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+#csgo-button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #9e180c;
+}
+
+#csgo-button:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+} */
