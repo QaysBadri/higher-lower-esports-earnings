@@ -1,5 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap");
 
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-down {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -26,23 +50,13 @@ body {
   color: azure;
 }
 
-/* #front-page {
-  position: fixed;
-  background-image: url("Images/nuke-background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  filter: blur(20px);
-  z-index: 100;
-} */
-
 #circle {
   background: #25252a;
   border-radius: 50%;
   width: 120px;
   height: 120px;
   z-index: 1;
+  transition: ease-out 0.5s;
 }
 
 #inner-circle {
@@ -62,6 +76,19 @@ body {
   font-size: 35px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+#fire-animation {
+  position: fixed;
+  bottom: -2%;
+  right: -0.9%;
+  width: 120px;
+  height: 200px;
+  transform: scale(0);
+  background-image: url("Images/fireAnimation.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
 }
 
 #score {
@@ -274,59 +301,3 @@ body {
   opacity: 1;
   z-index: -1;
 }
-
-/* #logo {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 300px;
-  height: 100vh;
-  background: url("Images\logo.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: 101;
-}
-
-#csgo-button {
-  position: fixed;
-  width: 200px;
-  height: 60px;
-  color: white;
-  border-radius: 4px;
-  background-color: #25252a;
-  top: 55%;
-  right: 25%;
-  font-size: 1.7rem;
-  font-family: "Source Sans 3", sans-serif;
-  transform: translateX(50%);
-  transform-origin: center;
-  border: 3px solid #9e180c;
-  z-index: 101;
-  transition: ease-out 0.3s;
-}
-
-#csgo-button:hover {
-  color: #fff;
-  cursor: pointer;
-}
-
-#csgo-button:before {
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  content: "";
-  background-color: #9e180c;
-}
-
-#csgo-button:hover:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  z-index: -1;
-} */

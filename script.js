@@ -2,7 +2,8 @@ import { CSGOdata } from "./CSGOdata.js";
 
 let highScore = 0;
 let score = 0;
-let x, y;
+let player1, player2;
+let currentHighScore = 0;
 
 const higherBtn = document.getElementById("higher-button");
 const lowerBtn = document.getElementById("lower-button");
@@ -12,7 +13,7 @@ const highScoreValue = document.getElementById("highscore-value");
 
 const innerCircle = document.getElementById("inner-circle");
 
-function chooseNumberFrom0to100() {
+function chooseNumberFrom0to99() {
   return Math.floor(Math.random() * 99);
 }
 
@@ -24,41 +25,22 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// this comment is temporary and will be removed soon
-// https://api.esportsearnings.com/v0/LookupHighestEarningPlayersByGame?apikey=615007f62697888759490d56af6b163d5dd9ba9c997ebecf986833d41088bc61&gameid=245&offset=0
-// const apiKey =
-//   "615007f62697888759490d56af6b163d5dd9ba9c997ebecf986833d41088bc61";
-// // LookupHighestEarningPlayers (top 100 of all esports) == http://api.esportsearnings.com/v0/LookupHighestEarningPlayers?apikey=<apikey>&offset=<offset>
-// const CSGO = "245";
-// const Dota2 = "231";
-// const LeagueOfLegends = "164";
-// const Valorant = "646";
-// const PUBG = "504";
-// const Fortnite = "534";
-// let offset = "0";
-// https://www.esportsearnings.com/apidocs
-// LookupHighestEarningPlayersByGame (top 100 of this game) == http://api.esportsearnings.com/v0/LookupHighestEarningPlayersByGame?apikey=<apikey>&gameid=<gameid>>&offset=<offset>
-// apikey - The unique API Key associated with your account.
-// format - Format of the output. (default: JSON)
-// gameid - The unique ID associated with the game on the website.
-// offset - The number of players to skip before returning results. (default: 0)
-//     `https://api.esportsearnings.com/v0/LookupHighestEarningPlayersByGame?apikey=${apiKey}&gameid=${CSGO}&offset=${offset}`
-
 function updatePlayerInfo() {
   const leftName = document.getElementById("left-name");
   const leftEarnings = document.getElementById("left-earnings");
   const rightName = document.getElementById("right-name");
-  const currentHandle = CSGOdata[x].CurrentHandle;
-  const currentHandle2 = CSGOdata[y].CurrentHandle;
+  const currentHandle = CSGOdata[player1].CurrentHandle;
+  const currentHandle2 = CSGOdata[player2].CurrentHandle;
   const leftIMG = document.getElementById("left-panel");
   const rightIMG = document.getElementById("right-panel");
 
-  leftName.innerHTML = `${CSGOdata[x].NameFirst} "<span class="player-handle-color">${currentHandle}</span>" ${CSGOdata[x].NameLast}`;
-  leftEarnings.textContent = "$" + addCommasToNumber(CSGOdata[x].TotalUSDPrize);
-  rightName.innerHTML = `${CSGOdata[y].NameFirst} "<span class="player-handle-color">${currentHandle2}</span>" ${CSGOdata[y].NameLast}`;
+  leftName.innerHTML = `${CSGOdata[player1].NameFirst} "<span class="player-handle-color">${currentHandle}</span>" ${CSGOdata[player1].NameLast}`;
+  leftEarnings.textContent =
+    "$" + addCommasToNumber(CSGOdata[player1].TotalUSDPrize);
+  rightName.innerHTML = `${CSGOdata[player2].NameFirst} "<span class="player-handle-color">${currentHandle2}</span>" ${CSGOdata[player2].NameLast}`;
 
-  leftIMG.style.background = `url(${CSGOdata[x].ImageURL})`;
-  rightIMG.style.background = `url(${CSGOdata[y].ImageURL})`;
+  leftIMG.style.background = `url(${CSGOdata[player1].ImageURL})`;
+  rightIMG.style.background = `url(${CSGOdata[player2].ImageURL})`;
   leftIMG.style.backgroundRepeat = "no-repeat";
   rightIMG.style.backgroundRepeat = "no-repeat";
   leftIMG.style.backgroundSize = "cover";
@@ -74,38 +56,55 @@ function hideEarningsOnRightPanel() {
   rightEarnings.textContent = "";
 }
 
-// BUG: when clicking off the tab and coming back, the animation is still running
-// the animation stops when the tab isn't active but the new round will continue to start which causes the earnings to never be removed
 function animateCountingOnRightPanelEarnings() {
-  const rightEarnings = document.getElementById("right-earnings");
-  const rightEarningsValue = Number(CSGOdata[y].TotalUSDPrize);
-  const animationDuration = 1500;
-  const frameDuration = 16;
+  return new Promise((resolve) => {
+    const rightEarnings = document.getElementById("right-earnings");
+    const rightEarningsValue = Number(CSGOdata[player2].TotalUSDPrize);
+    const animationDuration = 1500;
+    const frameDuration = 16;
 
-  const totalFrames = Math.round(animationDuration / frameDuration);
-  const increment = Math.ceil(rightEarningsValue / totalFrames);
+    const totalFrames = Math.round(animationDuration / frameDuration);
+    const increment = Math.ceil(rightEarningsValue / totalFrames);
 
-  let earnings = 0;
-  let frameCount = 0;
+    let earnings = 0;
+    let frameCount = 0;
 
-  function updateEarnings() {
-    if (frameCount < totalFrames) {
-      earnings += increment;
-      rightEarnings.textContent = "$" + addCommasToNumber(earnings);
-      frameCount++;
-      setTimeout(updateEarnings, frameDuration);
-    } else {
-      rightEarnings.textContent = "$" + addCommasToNumber(rightEarningsValue);
+    function updateEarnings() {
+      if (frameCount < totalFrames) {
+        earnings += increment;
+        rightEarnings.textContent = "$" + addCommasToNumber(earnings);
+        frameCount++;
+        setTimeout(updateEarnings, frameDuration);
+      } else {
+        rightEarnings.textContent = "$" + addCommasToNumber(rightEarningsValue);
+        resolve();
+      }
     }
-  }
 
-  updateEarnings();
+    updateEarnings();
+  });
 }
 
-function handleButtonClick(isHigher) {
+function showFireAnimation() {
+  const fireAnimation = document.getElementById("fire-animation");
+  fireAnimation.style.transform = "scale(0.6)";
+}
+
+function removeFireAnimation() {
+  const fireAnimation = document.getElementById("fire-animation");
+  fireAnimation.style.transform = "scale(0)";
+}
+
+function removeButtons() {
+  higherBtn.style.display = "none";
+  lowerBtn.style.display = "none";
+}
+
+function updateScore(isHigher) {
   if (
     isHigher ==
-    Number(CSGOdata[y].TotalUSDPrize) > Number(CSGOdata[x].TotalUSDPrize)
+    Number(CSGOdata[player2].TotalUSDPrize) >
+      Number(CSGOdata[player1].TotalUSDPrize)
   ) {
     score++;
     scoreValue.textContent = score;
@@ -119,8 +118,11 @@ function handleButtonClick(isHigher) {
     scoreValue.textContent = score;
   }
 
-  higherBtn.style.display = "none";
-  lowerBtn.style.display = "none";
+  if (score >= Number(currentHighScore) + 3) {
+    showFireAnimation();
+  } else {
+    removeFireAnimation();
+  }
 }
 
 function pullHighScoreFromLocalStorage() {
@@ -132,21 +134,37 @@ function pullHighScoreFromLocalStorage() {
 }
 
 function getNewPlayersForBothPanels() {
-  x = chooseNumberFrom0to100();
-  y = chooseNumberFrom0to100();
+  const prevPlayer1 = player1;
+  const prevPlayer2 = player2;
 
-  while (x == y) {
-    x = chooseNumberFrom0to100();
-    y = chooseNumberFrom0to100();
+  player1 = chooseNumberFrom0to99();
+  player2 = chooseNumberFrom0to99();
+
+  while (
+    player1 == player2 ||
+    player1 == prevPlayer1 ||
+    player1 == prevPlayer2 ||
+    player2 == prevPlayer1 ||
+    player2 == prevPlayer2
+  ) {
+    player1 = chooseNumberFrom0to99();
+    player2 = chooseNumberFrom0to99();
+  }
+
+  pullHighScoreFromLocalStorage();
+  if (currentHighScore < localStorage.getItem("highScore")) {
+    currentHighScore = localStorage.getItem("highScore");
   }
 }
 
 function getNewPlayerForRightPanel() {
-  x = y;
-  y = chooseNumberFrom0to100();
-  while (x == y) {
-    x = chooseNumberFrom0to100();
-    y = chooseNumberFrom0to100();
+  const prevPlayer1 = player1;
+
+  player1 = player2;
+  player2 = chooseNumberFrom0to99();
+  while (player1 == player2 || player2 == prevPlayer1) {
+    player1 = chooseNumberFrom0to99();
+    player2 = chooseNumberFrom0to99();
   }
 }
 
@@ -162,11 +180,23 @@ function showButtonsForNewRound() {
 
 function showGreenCircleForCorrectAnswer() {
   circle.style.backgroundColor = "#396d14";
+  circle.style.animation = "scale-up 1.2s ease-in-out";
+
+  setTimeout(() => {
+    circle.style.animation = "";
+  }, 1200);
+
   innerCircle.textContent = "✓";
 }
 
 function showRedCircleForWrongAnswer() {
   circle.style.backgroundColor = "#9e180c";
+  circle.style.animation = "scale-down 1.2s ease-in-out";
+
+  setTimeout(() => {
+    circle.style.animation = "";
+  }, 1200);
+
   innerCircle.textContent = "✗";
 }
 
@@ -180,29 +210,28 @@ function setupPageForInitialLoad() {
   updatePlayerInfo();
 }
 
-function handleGameRound(isHigher) {
-  (async () => {
-    handleButtonClick(isHigher);
-    animateCountingOnRightPanelEarnings();
+async function handleGameRound(isHigher) {
+  removeButtons();
+  await animateCountingOnRightPanelEarnings();
+  await updateScore(isHigher);
 
-    if (score > 0) {
-      showGreenCircleForCorrectAnswer();
-      await sleep(4000);
-      hideEarningsOnRightPanel();
-      getNewPlayerForRightPanel();
-      showButtonsForNewRound();
-      updatePlayerInfo();
-      revertCircleForNewRound();
-    } else {
-      showRedCircleForWrongAnswer();
-      await sleep(4000);
-      hideEarningsOnRightPanel();
-      getNewPlayersForBothPanels();
-      showButtonsForNewRound();
-      updatePlayerInfo();
-      revertCircleForNewRound();
-    }
-  })();
+  if (score > 0) {
+    showGreenCircleForCorrectAnswer();
+    await sleep(3000);
+    hideEarningsOnRightPanel();
+    getNewPlayerForRightPanel();
+    showButtonsForNewRound();
+    updatePlayerInfo();
+    revertCircleForNewRound();
+  } else {
+    showRedCircleForWrongAnswer();
+    await sleep(3000);
+    hideEarningsOnRightPanel();
+    getNewPlayersForBothPanels();
+    showButtonsForNewRound();
+    updatePlayerInfo();
+    revertCircleForNewRound();
+  }
 }
 
 window.addEventListener("DOMContentLoaded", setupPageForInitialLoad);
