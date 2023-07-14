@@ -301,3 +301,615 @@ body {
   opacity: 1;
   z-index: -1;
 }
+
+@media (min-width: 0px) and (max-width: 380px) {
+  #circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  #inner-circle {
+    font-size: 18px;
+  }
+
+  #high-score {
+    font-size: 17px;
+  }
+
+  #score {
+    font-size: 17px;
+  }
+
+  #left-name {
+    font-size: 20px;
+    top: 19vh;
+    left: 50%;
+    white-space: nowrap;
+  }
+
+  #left-has {
+    font-size: 10px;
+    top: 23vh;
+    left: 50%;
+  }
+
+  #left-earnings {
+    font-size: 35px;
+    top: 24vh;
+    left: 50%;
+  }
+
+  #left-bottom-text {
+    font-size: 10px;
+    top: 31vh;
+    left: 50%;
+  }
+
+  #right-name {
+    font-size: 15px;
+    top: 65vh;
+    right: 50%;
+    white-space: nowrap;
+  }
+
+  #right-has {
+    font-size: 10px;
+    top: 68vh;
+    right: 50%;
+  }
+
+  #right-earnings {
+    font-size: 45px;
+    top: 71vh;
+    right: 50%;
+  }
+
+  #right-bottom-text {
+    font-size: 10px;
+    top: 81vh;
+    right: 50%;
+  }
+
+  #higher-button {
+    width: 100px;
+    height: 30px;
+    font-size: 0.8rem;
+    top: 71vh;
+    right: 50%;
+  }
+
+  #lower-button {
+    width: 100px;
+    height: 30px;
+    font-size: 0.8rem;
+    top: 76vh;
+    right: 50%;
+  }
+
+  #left-panel {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+    filter: blur(1px);
+  }
+
+  #right-panel {
+    top: 50vh;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+    filter: blur(1px);
+  }
+
+  #fire-animation {
+    transform: scale(0.1);
+    bottom: -6%;
+    right: -12%;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 480px) {
+  #circle {
+    width: 55px;
+    height: 55px;
+  }
+
+  #inner-circle {
+    font-size: 18px;
+  }
+
+  #high-score {
+    font-size: 17px;
+  }
+
+  #score {
+    font-size: 17px;
+  }
+
+  #left-name {
+    font-size: 25px;
+    top: 19vh;
+    left: 50%;
+    white-space: nowrap;
+  }
+
+  #left-has {
+    font-size: 12px;
+    top: 23vh;
+    left: 50%;
+  }
+
+  #left-earnings {
+    font-size: 40px;
+    top: 25vh;
+    left: 50%;
+  }
+
+  #left-bottom-text {
+    font-size: 14px;
+    top: 32vh;
+    left: 50%;
+  }
+
+  #right-name {
+    font-size: 25px;
+    top: 65vh;
+    right: 50%;
+    white-space: nowrap;
+  }
+
+  #right-has {
+    font-size: 12px;
+    top: 69vh;
+    right: 50%;
+  }
+
+  #right-earnings {
+    font-size: 50px;
+    top: 71vh;
+    right: 50%;
+  }
+
+  #right-bottom-text {
+    font-size: 14px;
+    top: 81vh;
+    right: 50%;
+  }
+
+  #higher-button {
+    width: 100px;
+    height: 35px;
+    font-size: 0.8rem;
+    top: 71vh;
+    right: 50%;
+  }
+
+  #lower-button {
+    width: 100px;
+    height: 35px;
+    font-size: 0.8rem;
+    top: 76vh;
+    right: 50%;
+  }
+
+  #left-panel {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+    filter: blur(1px);
+  }
+
+  #right-panel {
+    top: 50vh;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+    filter: blur(1px);
+  }
+
+  #fire-animation {
+    transform: scale(0.1);
+    bottom: -4%;
+    right: -11%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  #circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  #inner-circle {
+    font-size: 18px;
+  }
+
+  #high-score {
+    font-size: 17px;
+  }
+
+  #score {
+    font-size: 17px;
+  }
+
+  #left-name {
+    font-size: 20px;
+    top: 20vh;
+    left: 50%;
+    white-space: nowrap;
+  }
+
+  #left-has {
+    font-size: 10px;
+    top: 23vh;
+    left: 50%;
+  }
+
+  #left-earnings {
+    font-size: 35px;
+    top: 25vh;
+    left: 50%;
+  }
+
+  #left-bottom-text {
+    font-size: 10px;
+    top: 31vh;
+    left: 50%;
+  }
+
+  #right-name {
+    font-size: 15px;
+    top: 65vh;
+    right: 50%;
+    white-space: nowrap;
+  }
+
+  #right-has {
+    font-size: 10px;
+    top: 68vh;
+    right: 50%;
+  }
+
+  #right-earnings {
+    font-size: 40px;
+    top: 70vh;
+    right: 50%;
+  }
+
+  #right-bottom-text {
+    font-size: 10px;
+    top: 78vh;
+    right: 50%;
+  }
+
+  #higher-button {
+    width: 100px;
+    height: 30px;
+    font-size: 0.8rem;
+    top: 70vh;
+    right: 50%;
+  }
+
+  #lower-button {
+    width: 100px;
+    height: 30px;
+    font-size: 0.8rem;
+    top: 74vh;
+    right: 50%;
+  }
+
+  #left-panel {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+    filter: blur(1px);
+  }
+
+  #right-panel {
+    top: 50vh;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+    filter: blur(1px);
+  }
+
+  #fire-animation {
+    transform: scale(0.2);
+    bottom: -4%;
+    right: -12%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  #circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  #inner-circle {
+    font-size: 22px;
+  }
+
+  #high-score {
+    font-size: 20px;
+  }
+
+  #score {
+    font-size: 20px;
+  }
+
+  #left-name {
+    font-size: 35px;
+    top: 18vh;
+    left: 50%;
+    white-space: nowrap;
+  }
+
+  #left-has {
+    font-size: 15px;
+    top: 22vh;
+    left: 50%;
+  }
+
+  #left-earnings {
+    font-size: 50px;
+    top: 23vh;
+    left: 50%;
+  }
+
+  #left-bottom-text {
+    font-size: 15px;
+    top: 28vh;
+    left: 50%;
+  }
+
+  #right-name {
+    font-size: 35px;
+    top: 65vh;
+    right: 50%;
+    white-space: nowrap;
+  }
+
+  #right-has {
+    font-size: 15px;
+    top: 68vh;
+    right: 50%;
+  }
+
+  #right-earnings {
+    font-size: 60px;
+    top: 70vh;
+    right: 50%;
+  }
+
+  #right-bottom-text {
+    font-size: 15px;
+    top: 78vh;
+    right: 50%;
+  }
+
+  #higher-button {
+    width: 130px;
+    height: 45px;
+    font-size: 0.8rem;
+    top: 70vh;
+    right: 50%;
+  }
+
+  #lower-button {
+    width: 130px;
+    height: 45px;
+    font-size: 0.8rem;
+    top: 74vh;
+    right: 50%;
+  }
+
+  #left-panel {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+  }
+
+  #right-panel {
+    top: 50vh;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+  }
+
+  #fire-animation {
+    transform: scale(0.1);
+    bottom: -2.5%;
+    right: -5%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+  #circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  #inner-circle {
+    font-size: 25px;
+  }
+
+  #high-score {
+    font-size: 25px;
+  }
+
+  #score {
+    font-size: 25px;
+  }
+
+  #left-name {
+    font-size: 35px;
+    top: 15vh;
+    left: 50%;
+    white-space: nowrap;
+  }
+
+  #left-has {
+    font-size: 18px;
+    top: 19vh;
+    left: 50%;
+  }
+
+  #left-earnings {
+    font-size: 55px;
+    top: 21vh;
+    left: 50%;
+  }
+
+  #left-bottom-text {
+    font-size: 20px;
+    top: 27vh;
+    left: 50%;
+  }
+
+  #right-name {
+    font-size: 35px;
+    top: 62vh;
+    right: 50%;
+    white-space: nowrap;
+  }
+
+  #right-has {
+    font-size: 20px;
+    top: 66vh;
+    right: 50%;
+  }
+
+  #right-earnings {
+    font-size: 65px;
+    top: 69vh;
+    right: 50%;
+  }
+
+  #right-bottom-text {
+    font-size: 20px;
+    top: 79vh;
+    right: 50%;
+  }
+
+  #higher-button {
+    width: 140px;
+    height: 50px;
+    font-size: 1rem;
+    top: 69vh;
+    right: 50%;
+  }
+
+  #lower-button {
+    width: 140px;
+    height: 50px;
+    font-size: 1rem;
+    top: 74vh;
+    right: 50%;
+  }
+
+  #left-panel {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+    filter: blur(1px);
+  }
+
+  #right-panel {
+    top: 50vh;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+    filter: blur(1px);
+  }
+
+  #fire-animation {
+    transform: scale(0.2);
+    bottom: -3%;
+    right: -4%;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1920px) {
+  #circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  #inner-circle {
+    font-size: 25px;
+  }
+
+  #high-score {
+    font-size: 25px;
+  }
+
+  #score {
+    font-size: 25px;
+  }
+
+  #left-name {
+    font-size: 40px;
+  }
+
+  #left-has {
+    font-size: 20px;
+    top: 44vh;
+  }
+
+  #left-earnings {
+    font-size: 70px;
+    top: 47vh;
+  }
+
+  #left-bottom-text {
+    font-size: 20px;
+    top: 55vh;
+  }
+
+  #right-name {
+    font-size: 40px;
+  }
+
+  #right-has {
+    font-size: 20px;
+    top: 44vh;
+  }
+
+  #right-earnings {
+    font-size: 80px;
+    top: 47vh;
+  }
+
+  #right-bottom-text {
+    font-size: 20px;
+    top: 58vh;
+  }
+
+  #higher-button {
+    top: 47vh;
+  }
+
+  #lower-button {
+    top: 53vh;
+  }
+
+  #left-panel {
+    filter: blur(1px);
+  }
+
+  #right-panel {
+    filter: blur(1px);
+  }
+
+  #fire-animation {
+    transform: scale(0.2);
+    bottom: -3%;
+    right: -2.5%;
+  }
+}

@@ -213,7 +213,7 @@ function setupPageForInitialLoad() {
 async function handleGameRound(isHigher) {
   removeButtons();
   await animateCountingOnRightPanelEarnings();
-  await updateScore(isHigher);
+  updateScore(isHigher);
 
   if (score > 0) {
     showGreenCircleForCorrectAnswer();
@@ -236,6 +236,10 @@ async function handleGameRound(isHigher) {
 
 window.addEventListener("DOMContentLoaded", setupPageForInitialLoad);
 
-higherBtn.addEventListener("click", () => handleGameRound(true));
+higherBtn.addEventListener("click", function () {
+  handleGameRound(true);
+});
 
-lowerBtn.addEventListener("click", () => handleGameRound(false));
+lowerBtn.addEventListener("click", function () {
+  handleGameRound(false);
+});
