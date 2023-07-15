@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>The Higher Lower Game: Esport Earnings</title>
+    <link rel="icon" type="img/png" href="Images/favicon.png" />
+    <script type="module" src="script.js" defer></script>
+    <script type="module" src="CSGOdata.js" defer></script>
+  </head>
+  <body>
+    <div class="game-container">
+      <div id="circle">
+        <div id="inner-circle">VS</div>
+      </div>
+      <div id="fire-animation"></div>
+      <div id="score">Score: <span id="score-value"></span></div>
+      <div id="high-score">High Score: <span id="highscore-value"></span></div>
+      <div class="left-panel-class">
+        <div id="left-panel"></div>
+        <div id="left-name"><span id="left-name"></span></div>
+        <div id="left-has">has</div>
+        <button id="higher-button">Higher</button>
+        <div id="left-earnings"><span id="left-earnings"></span></div>
+        <div id="left-bottom-text">in player earnings</div>
+      </div>
+      <div class="right-panel-class">
+        <div id="right-panel"></div>
+        <div id="right-name"><span id="right-name"></span></div>
+        <div id="right-has">has</div>
+        <button id="lower-button">Lower</button>
+        <div id="right-earnings"><span id="right-earnings"></span></div>
+        <div id="right-bottom-text">in player earnings</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -10,29 +10,41 @@
     <script type="module" src="CSGOdata.js" defer></script>
   </head>
   <body>
-    <div class="game-container">
-      <div id="circle">
-        <div id="inner-circle">VS</div>
-      </div>
-      <div id="fire-animation"></div>
-      <div id="score">Score: <span id="score-value"></span></div>
-      <div id="high-score">High Score: <span id="highscore-value"></span></div>
-      <div class="left-panel-class">
-        <div id="left-panel"></div>
-        <div id="left-name"><span id="left-name"></span></div>
-        <div id="left-has">has</div>
-        <button id="higher-button">Higher</button>
-        <div id="left-earnings"><span id="left-earnings"></span></div>
-        <div id="left-bottom-text">in player earnings</div>
-      </div>
-      <div class="right-panel-class">
-        <div id="right-panel"></div>
-        <div id="right-name"><span id="right-name"></span></div>
-        <div id="right-has">has</div>
-        <button id="lower-button">Lower</button>
-        <div id="right-earnings"><span id="right-earnings"></span></div>
-        <div id="right-bottom-text">in player earnings</div>
-      </div>
+    <div class="front-page">
+      <div id="logo"></div>
+      <div id="logo-border"></div>
+      <div id="coming-soon">Coming Soon:</div>
+      <button onclick="location.href = 'csgo.html'; " id="csgo-button">
+        CS:GO
+      </button>
+      <button
+        onclick="location.href = 'dota2.html'; "
+        id="dota2-button"
+        disabled
+      >
+        Dota 2
+      </button>
+      <button
+        onclick="location.href = 'fortnite.html'; "
+        id="fortnite-button"
+        disabled
+      >
+        Fortnite
+      </button>
+      <button
+        onclick="location.href = 'valorant.html'; "
+        id="valorant-button"
+        disabled
+      >
+        Valorant
+      </button>
+      <button
+        onclick="location.href = 'league.html'; "
+        id="league-button"
+        disabled
+      >
+        League
+      </button>
     </div>
   </body>
 </html>

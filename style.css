@@ -32,12 +32,12 @@ body::before {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background-image: url("Images/nuke-background.png");
+  background-image: url("Images/trophy-hold.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  filter: blur(20px);
+  filter: blur(1.5px);
 }
 
 body {
@@ -302,6 +302,182 @@ body {
   z-index: -1;
 }
 
+#csgo-button {
+  position: fixed;
+  background-color: #25252a;
+  color: white;
+  width: 250px;
+  height: 70px;
+  border-radius: 15px;
+  top: 40%;
+  left: 40%;
+  font-size: 1.7rem;
+  font-family: "Source Sans 3", sans-serif;
+  transform: translateX(50%);
+  transform-origin: center;
+  transition: ease-out 0.7s;
+  border: 3px solid #fba90a;
+  box-shadow: inset 0 0 0 #fba90a;
+  z-index: 1;
+}
+
+#csgo-button:hover {
+  color: #fff;
+  cursor: pointer;
+  box-shadow: inset 300px 0 0 0 #fba90a;
+}
+
+#csgo-button:disabled {
+  cursor: not-allowed;
+}
+
+#coming-soon {
+  position: fixed;
+  font-size: 20px;
+  top: 49%;
+  left: 47.5%;
+}
+
+#logo {
+  position: fixed;
+  transform: scale(1.8);
+  top: 30%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  z-index: 1;
+  background-image: url("Images/logo.svg");
+  background-repeat: no-repeat;
+}
+
+#logo-border {
+  position: fixed;
+  transform: scale(1);
+  top: 11%;
+  left: 40.2%;
+  width: 500px;
+  height: 340px;
+  z-index: -1;
+  background-color: #25252a;
+  border-radius: 5%;
+}
+
+#dota2-button {
+  position: fixed;
+  background-color: #25252a;
+  color: white;
+  width: 250px;
+  height: 70px;
+  border-radius: 15px;
+  top: 52%;
+  left: 40%;
+  font-size: 1.7rem;
+  font-family: "Source Sans 3", sans-serif;
+  transform: translateX(50%);
+  transform-origin: center;
+  transition: ease-out 0.7s;
+  border: 3px solid #a72714;
+  box-shadow: inset 0 0 0 #a72714;
+  z-index: 1;
+}
+
+#dota2-button:hover {
+  color: #fff;
+  cursor: pointer;
+  box-shadow: inset 300px 0 0 0 #a72714;
+}
+
+#dota2-button:disabled {
+  cursor: not-allowed;
+}
+
+#fortnite-button {
+  position: fixed;
+  background-color: #25252a;
+  color: white;
+  width: 250px;
+  height: 70px;
+  border-radius: 15px;
+  top: 58%;
+  left: 40%;
+  font-size: 1.7rem;
+  font-family: "Source Sans 3", sans-serif;
+  transform: translateX(50%);
+  transform-origin: center;
+  transition: ease-out 0.7s;
+  border: 3px solid #9d4dbb;
+  box-shadow: inset 0 0 0 #9d4dbb;
+  z-index: 1;
+}
+
+#fortnite-button:hover {
+  color: #fff;
+  cursor: pointer;
+  box-shadow: inset 300px 0 0 0 #9d4dbb;
+}
+
+#fortnite-button:disabled {
+  cursor: not-allowed;
+}
+
+#valorant-button {
+  position: fixed;
+  background-color: #25252a;
+  color: white;
+  width: 250px;
+  height: 70px;
+  border-radius: 15px;
+  top: 64%;
+  left: 40%;
+  font-size: 1.7rem;
+  font-family: "Source Sans 3", sans-serif;
+  transform: translateX(50%);
+  transform-origin: center;
+  transition: ease-out 0.7s;
+  border: 3px solid #fd4556;
+  box-shadow: inset 0 0 0 #fd4556;
+  z-index: 1;
+}
+
+#valorant-button:hover {
+  color: #fff;
+  cursor: pointer;
+  box-shadow: inset 300px 0 0 0 #fd4556;
+}
+
+#valorant-button:disabled {
+  cursor: not-allowed;
+}
+
+#league-button {
+  position: fixed;
+  background-color: #25252a;
+  color: white;
+  width: 250px;
+  height: 70px;
+  border-radius: 15px;
+  top: 70%;
+  left: 40%;
+  font-size: 1.7rem;
+  font-family: "Source Sans 3", sans-serif;
+  transform: translateX(50%);
+  transform-origin: center;
+  transition: ease-out 0.7s;
+  border: 3px solid #001a6c;
+  box-shadow: inset 0 0 0 #001a6c;
+  z-index: 1;
+}
+
+#league-button:hover {
+  color: #fff;
+  cursor: pointer;
+  box-shadow: inset 300px 0 0 0 #001a6c;
+}
+
+#league-button:disabled {
+  cursor: not-allowed;
+}
+
 @media (min-width: 0px) and (max-width: 380px) {
   #circle {
     width: 50px;
@@ -406,6 +582,63 @@ body {
     transform: scale(0.1);
     bottom: -6%;
     right: -12%;
+  }
+
+  #logo {
+    transform: scale(1);
+    top: 10%;
+    left: 21%;
+    width: 250px;
+    height: 200px;
+  }
+
+  #logo-border {
+    top: 6%;
+    left: 16%;
+    width: 260px;
+    height: 190px;
+  }
+
+  #coming-soon {
+    position: fixed;
+    font-size: 15px;
+    top: 49%;
+    left: 38%;
+  }
+
+  #csgo-button {
+    top: 40%;
+    left: -2%;
+    width: 200px;
+    height: 50px;
+  }
+
+  #dota2-button {
+    top: 52%;
+    left: -2%;
+    width: 200px;
+    height: 50px;
+  }
+
+  #fortnite-button {
+    top: 61%;
+    left: -2%;
+    width: 200px;
+    height: 50px;
+  }
+
+  #valorant-button {
+    top: 70%;
+    left: -2%;
+    width: 200px;
+    height: 50px;
+  }
+
+  #league-button {
+    top: 79%;
+    left: -2%;
+    width: 200px;
+    height: 50px;
   }
 }
 
@@ -514,6 +747,63 @@ body {
     bottom: -4%;
     right: -11%;
   }
+
+  #logo {
+    transform: scale(1);
+    top: 10%;
+    left: 22.5%;
+    width: 250px;
+    height: 200px;
+  }
+
+  #logo-border {
+    top: 7%;
+    left: 18%;
+    width: 260px;
+    height: 190px;
+  }
+
+  #coming-soon {
+    position: fixed;
+    font-size: 15px;
+    top: 49%;
+    left: 38%;
+  }
+
+  #csgo-button {
+    top: 35%;
+    left: 0%;
+    width: 200px;
+    height: 60px;
+  }
+
+  #dota2-button {
+    top: 52%;
+    left: 0%;
+    width: 200px;
+    height: 60px;
+  }
+
+  #fortnite-button {
+    top: 61%;
+    left: 0%;
+    width: 200px;
+    height: 60px;
+  }
+
+  #valorant-button {
+    top: 70%;
+    left: 0%;
+    width: 200px;
+    height: 60px;
+  }
+
+  #league-button {
+    top: 79%;
+    left: 0%;
+    width: 200px;
+    height: 60px;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
@@ -621,6 +911,63 @@ body {
     bottom: -4%;
     right: -12%;
   }
+
+  #logo {
+    transform: scale(1.2);
+    top: 10%;
+    left: 30%;
+    width: 250px;
+    height: 200px;
+  }
+
+  #logo-border {
+    top: 5%;
+    left: 22%;
+    width: 310px;
+    height: 210px;
+  }
+
+  #coming-soon {
+    position: fixed;
+    font-size: 20px;
+    top: 48%;
+    left: 39%;
+  }
+
+  #csgo-button {
+    top: 38%;
+    left: 13%;
+    width: 200px;
+    height: 60px;
+  }
+
+  #dota2-button {
+    top: 52%;
+    left: 13%;
+    width: 200px;
+    height: 60px;
+  }
+
+  #fortnite-button {
+    top: 61%;
+    left: 13%;
+    width: 200px;
+    height: 60px;
+  }
+
+  #valorant-button {
+    top: 70%;
+    left: 13%;
+    width: 200px;
+    height: 60px;
+  }
+
+  #league-button {
+    top: 79%;
+    left: 13%;
+    width: 200px;
+    height: 60px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
@@ -725,6 +1072,63 @@ body {
     transform: scale(0.1);
     bottom: -2.5%;
     right: -5%;
+  }
+
+  #logo {
+    transform: scale(1.4);
+    top: 13%;
+    left: 37%;
+    width: 250px;
+    height: 200px;
+  }
+
+  #logo-border {
+    top: 6%;
+    left: 27%;
+    width: 370px;
+    height: 270px;
+  }
+
+  #coming-soon {
+    position: fixed;
+    font-size: 20px;
+    top: 48%;
+    left: 40%;
+  }
+
+  #csgo-button {
+    top: 37%;
+    left: 23%;
+    width: 220px;
+    height: 65px;
+  }
+
+  #dota2-button {
+    top: 52%;
+    left: 23%;
+    width: 220px;
+    height: 65px;
+  }
+
+  #fortnite-button {
+    top: 61%;
+    left: 23%;
+    width: 220px;
+    height: 65px;
+  }
+
+  #valorant-button {
+    top: 70%;
+    left: 23%;
+    width: 220px;
+    height: 65px;
+  }
+
+  #league-button {
+    top: 79%;
+    left: 23%;
+    width: 220px;
+    height: 65px;
   }
 }
 
@@ -833,6 +1237,50 @@ body {
     bottom: -3%;
     right: -4%;
   }
+
+  #logo {
+    top: 13%;
+    left: 42%;
+    width: 250px;
+    height: 200px;
+  }
+
+  #logo-border {
+    top: 3%;
+    left: 27.5%;
+  }
+
+  #coming-soon {
+    position: fixed;
+    font-size: 20px;
+    top: 49%;
+    left: 45%;
+  }
+
+  #csgo-button {
+    top: 37%;
+    left: 27%;
+  }
+
+  #dota2-button {
+    top: 52%;
+    left: 27%;
+  }
+
+  #fortnite-button {
+    top: 61%;
+    left: 27%;
+  }
+
+  #valorant-button {
+    top: 70%;
+    left: 27%;
+  }
+
+  #league-button {
+    top: 79%;
+    left: 27%;
+  }
 }
 
 @media (min-width: 1280px) and (max-width: 1920px) {
@@ -911,5 +1359,46 @@ body {
     transform: scale(0.2);
     bottom: -3%;
     right: -2.5%;
+  }
+
+  #logo {
+    top: 23%;
+    left: 50%;
+  }
+
+  #logo-border {
+    top: 4%;
+    left: 33%;
+  }
+
+  #coming-soon {
+    position: fixed;
+    top: 48%;
+    left: 46%;
+  }
+
+  #csgo-button {
+    top: 37%;
+    left: 33%;
+  }
+
+  #dota2-button {
+    top: 52%;
+    left: 33%;
+  }
+
+  #fortnite-button {
+    top: 61%;
+    left: 33%;
+  }
+
+  #valorant-button {
+    top: 70%;
+    left: 33%;
+  }
+
+  #league-button {
+    top: 79%;
+    left: 33%;
   }
 }
