@@ -4,9 +4,15 @@ let highScore = 0;
 let score = 0;
 let player1, player2;
 let currentHighScore = 0;
+let gameOverScoreValue = 0;
 
 const higherBtn = document.getElementById("higher-button");
 const lowerBtn = document.getElementById("lower-button");
+
+const tryAgainBtn = document.getElementById("try-again");
+const gameOver = document.getElementById("game-over");
+const gameOverScore = document.getElementById("game-over-score");
+const gameOverScoreID = document.getElementById("game-over-score-value");
 
 const scoreValue = document.getElementById("score-value");
 const highScoreValue = document.getElementById("highscore-value");
@@ -114,6 +120,7 @@ function updateScore(isHigher) {
       localStorage.setItem("highScore", highScore);
     }
   } else {
+    gameOverScoreValue = score;
     score = 0;
     scoreValue.textContent = score;
   }
@@ -200,10 +207,33 @@ function showRedCircleForWrongAnswer() {
   innerCircle.textContent = "✗";
 }
 
+function showGameOver() {
+  gameOver.style.display = "inline-block";
+  gameOverScore.style.display = "inline-block";
+  gameOverScoreID.textContent = gameOverScoreValue;
+  tryAgainBtn.style.display = "inline-block";
+}
+
+function hideGameOver() {
+  gameOver.style.display = "none";
+  gameOverScore.style.display = "none";
+  tryAgainBtn.style.display = "none";
+}
+
+function resetGame() {
+  hideEarningsOnRightPanel();
+  getNewPlayersForBothPanels();
+  showButtonsForNewRound();
+  updatePlayerInfo();
+  revertCircleForNewRound();
+  hideGameOver();
+}
+
 function setupPageForInitialLoad() {
   pullHighScoreFromLocalStorage();
   getNewPlayersForBothPanels();
 
+  hideGameOver();
   highScoreValue.textContent = highScore;
   scoreValue.textContent = score;
 
@@ -225,12 +255,8 @@ async function handleGameRound(isHigher) {
     revertCircleForNewRound();
   } else {
     showRedCircleForWrongAnswer();
-    await sleep(3000);
-    hideEarningsOnRightPanel();
-    getNewPlayersForBothPanels();
-    showButtonsForNewRound();
-    updatePlayerInfo();
-    revertCircleForNewRound();
+    await sleep(2000);
+    showGameOver();
   }
 }
 
@@ -243,3 +269,5 @@ higherBtn.addEventListener("click", function () {
 lowerBtn.addEventListener("click", function () {
   handleGameRound(false);
 });
+
+tryAgainBtn.addEventListener("click", resetGame);
