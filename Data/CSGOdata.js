@@ -6,7 +6,7 @@ export const CSGOdata = [
     CurrentHandle: "dupreeh",
     CountryCode: "dk",
     TotalUSDPrize: "2181164.40",
-    ImageURL: "CSGOPlayerImages/dupreeh.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/dupreeh.jpg",
   },
   {
     PlayerId: 3679,
@@ -15,7 +15,7 @@ export const CSGOdata = [
     CurrentHandle: "Xyp9x",
     CountryCode: "dk",
     TotalUSDPrize: "1998046.89",
-    ImageURL: "CSGOPlayerImages/Xyp9x.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Xyp9x.jpg",
   },
   {
     PlayerId: 3885,
@@ -24,7 +24,7 @@ export const CSGOdata = [
     CurrentHandle: "dev1ce",
     CountryCode: "dk",
     TotalUSDPrize: "1957031.54",
-    ImageURL: "CSGOPlayerImages/dev1ce.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/dev1ce.jpg",
   },
   {
     PlayerId: 3672,
@@ -33,7 +33,7 @@ export const CSGOdata = [
     CurrentHandle: "gla1ve",
     CountryCode: "dk",
     TotalUSDPrize: "1869042.41",
-    ImageURL: "CSGOPlayerImages/gla1ve.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/gla1ve.jpg",
   },
   {
     PlayerId: 17800,
@@ -42,7 +42,7 @@ export const CSGOdata = [
     CurrentHandle: "Magisk",
     CountryCode: "dk",
     TotalUSDPrize: "1774623.63",
-    ImageURL: "CSGOPlayerImages/Magisk.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Magisk.jpg",
   },
   {
     PlayerId: 8169,
@@ -51,7 +51,7 @@ export const CSGOdata = [
     CurrentHandle: "s1mple",
     CountryCode: "ua",
     TotalUSDPrize: "1718388.65",
-    ImageURL: "CSGOPlayerImages/s1mple.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/s1mple.jpg",
   },
   {
     PlayerId: 2452,
@@ -60,7 +60,7 @@ export const CSGOdata = [
     CurrentHandle: "karrigan",
     CountryCode: "dk",
     TotalUSDPrize: "1635052.06",
-    ImageURL: "CSGOPlayerImages/karrigan.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/karrigan.jpg",
   },
   {
     PlayerId: 16267,
@@ -69,7 +69,7 @@ export const CSGOdata = [
     CurrentHandle: "electroNic",
     CountryCode: "ru",
     TotalUSDPrize: "1572125.33",
-    ImageURL: "CSGOPlayerImages/electroNic.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/electroNic.jpg",
   },
   {
     PlayerId: 20415,
@@ -78,7 +78,7 @@ export const CSGOdata = [
     CurrentHandle: "Twistzz",
     CountryCode: "ca",
     TotalUSDPrize: "1524593.10",
-    ImageURL: "CSGOPlayerImages/Twistzz.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Twistzz.jpg",
   },
   {
     PlayerId: 5483,
@@ -87,7 +87,7 @@ export const CSGOdata = [
     CurrentHandle: "rain",
     CountryCode: "no",
     TotalUSDPrize: "1427516.24",
-    ImageURL: "CSGOPlayerImages/rain.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/rain.jpg",
   },
   {
     PlayerId: 10629,
@@ -96,7 +96,7 @@ export const CSGOdata = [
     CurrentHandle: "NAF",
     CountryCode: "ca",
     TotalUSDPrize: "1217282.06",
-    ImageURL: "CSGOPlayerImages/NAF.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/NAF.jpg",
   },
   {
     PlayerId: 5783,
@@ -105,7 +105,7 @@ export const CSGOdata = [
     CurrentHandle: "NiKo",
     CountryCode: "ba",
     TotalUSDPrize: "1193369.23",
-    ImageURL: "CSGOPlayerImages/NiKo.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/NiKo.jpg",
   },
   {
     PlayerId: 3888,
@@ -114,7 +114,7 @@ export const CSGOdata = [
     CurrentHandle: "apEX",
     CountryCode: "fr",
     TotalUSDPrize: "1191619.05",
-    ImageURL: "CSGOPlayerImages/apEX.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/apEX.jpg",
   },
   {
     PlayerId: 16800,
@@ -123,7 +123,7 @@ export const CSGOdata = [
     CurrentHandle: "Stewie2k",
     CountryCode: "us",
     TotalUSDPrize: "1186573.20",
-    ImageURL: "CSGOPlayerImages/Stewie2k.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Stewie2k.jpg",
   },
   {
     PlayerId: 49589,
@@ -132,7 +132,7 @@ export const CSGOdata = [
     CurrentHandle: "Perfecto",
     CountryCode: "ru",
     TotalUSDPrize: "1170037.44",
-    ImageURL: "CSGOPlayerImages/Perfecto.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Perfecto.jpg",
   },
   {
     PlayerId: 11788,
@@ -141,7 +141,7 @@ export const CSGOdata = [
     CurrentHandle: "ELiGE",
     CountryCode: "us",
     TotalUSDPrize: "1165212.82",
-    ImageURL: "CSGOPlayerImages/ELiGE.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/ELiGE.jpg",
   },
   {
     PlayerId: 31594,
@@ -150,7 +150,7 @@ export const CSGOdata = [
     CurrentHandle: "ropz",
     CountryCode: "ee",
     TotalUSDPrize: "1164827.41",
-    ImageURL: "CSGOPlayerImages/ropz.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/ropz.jpg",
   },
   {
     PlayerId: 2455,
@@ -159,7 +159,7 @@ export const CSGOdata = [
     CurrentHandle: "FalleN",
     CountryCode: "br",
     TotalUSDPrize: "1164186.54",
-    ImageURL: "CSGOPlayerImages/FalleN.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/FalleN.jpg",
   },
   {
     PlayerId: 36982,
@@ -168,7 +168,7 @@ export const CSGOdata = [
     CurrentHandle: "Boombl4",
     CountryCode: "ru",
     TotalUSDPrize: "1100699.87",
-    ImageURL: "CSGOPlayerImages/Boombl4.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Boombl4.jpg",
   },
   {
     PlayerId: 12183,
@@ -177,7 +177,7 @@ export const CSGOdata = [
     CurrentHandle: "TACO",
     CountryCode: "br",
     TotalUSDPrize: "1095886.48",
-    ImageURL: "CSGOPlayerImages/TACO.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/TACO.jpg",
   },
   {
     PlayerId: 12169,
@@ -186,7 +186,7 @@ export const CSGOdata = [
     CurrentHandle: "fer",
     CountryCode: "br",
     TotalUSDPrize: "1077986.54",
-    ImageURL: "CSGOPlayerImages/fer.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/fer.jpg",
   },
   {
     PlayerId: 8635,
@@ -195,7 +195,7 @@ export const CSGOdata = [
     CurrentHandle: "nitr0",
     CountryCode: "us",
     TotalUSDPrize: "1058468.13",
-    ImageURL: "CSGOPlayerImages/nitr0.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/nitr0.jpg",
   },
   {
     PlayerId: 73128,
@@ -204,7 +204,7 @@ export const CSGOdata = [
     CurrentHandle: "B1t",
     CountryCode: "ua",
     TotalUSDPrize: "1048991.03",
-    ImageURL: "CSGOPlayerImages/B1t.jpeg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/B1t.jpeg",
   },
   {
     PlayerId: 12182,
@@ -213,7 +213,7 @@ export const CSGOdata = [
     CurrentHandle: "coldzera",
     CountryCode: "br",
     TotalUSDPrize: "1046101.46",
-    ImageURL: "CSGOPlayerImages/coldzera.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/coldzera.jpg",
   },
   {
     PlayerId: 5000,
@@ -222,7 +222,7 @@ export const CSGOdata = [
     CurrentHandle: "KRiMZ",
     CountryCode: "se",
     TotalUSDPrize: "953761.90",
-    ImageURL: "CSGOPlayerImages/KRiMZ.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/KRiMZ.jpg",
   },
   {
     PlayerId: 3875,
@@ -231,7 +231,7 @@ export const CSGOdata = [
     CurrentHandle: "JW",
     CountryCode: "se",
     TotalUSDPrize: "919744.62",
-    ImageURL: "CSGOPlayerImages/JW.jpeg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/JW.jpeg",
   },
   {
     PlayerId: 5001,
@@ -240,7 +240,7 @@ export const CSGOdata = [
     CurrentHandle: "olofmeister",
     CountryCode: "se",
     TotalUSDPrize: "917714.60",
-    ImageURL: "CSGOPlayerImages/olofmeister.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/olofmeister.jpg",
   },
   {
     PlayerId: 3878,
@@ -249,7 +249,7 @@ export const CSGOdata = [
     CurrentHandle: "flusha",
     CountryCode: "se",
     TotalUSDPrize: "886552.89",
-    ImageURL: "CSGOPlayerImages/flusha.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/flusha.jpg",
   },
   {
     PlayerId: 8168,
@@ -258,7 +258,7 @@ export const CSGOdata = [
     CurrentHandle: "flamie",
     CountryCode: "ru",
     TotalUSDPrize: "872953.41",
-    ImageURL: "CSGOPlayerImages/flamie.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/flamie.jpg",
   },
   {
     PlayerId: 3290,
@@ -267,7 +267,7 @@ export const CSGOdata = [
     CurrentHandle: "NBK",
     CountryCode: "fr",
     TotalUSDPrize: "828938.17",
-    ImageURL: "CSGOPlayerImages/NBK.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/NBK.jpg",
   },
   {
     PlayerId: 54188,
@@ -276,7 +276,7 @@ export const CSGOdata = [
     CurrentHandle: "broky",
     CountryCode: "lv",
     TotalUSDPrize: "810132.41",
-    ImageURL: "CSGOPlayerImages/broky.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/broky.jpg",
   },
   {
     PlayerId: 3881,
@@ -285,7 +285,7 @@ export const CSGOdata = [
     CurrentHandle: "shox",
     CountryCode: "fr",
     TotalUSDPrize: "809307.08",
-    ImageURL: "CSGOPlayerImages/shox.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/shox.jpg",
   },
   {
     PlayerId: 3882,
@@ -294,7 +294,7 @@ export const CSGOdata = [
     CurrentHandle: "GuardiaN",
     CountryCode: "sk",
     TotalUSDPrize: "802435.95",
-    ImageURL: "CSGOPlayerImages/GuardiaN.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/GuardiaN.jpg",
   },
   {
     PlayerId: 25121,
@@ -303,7 +303,7 @@ export const CSGOdata = [
     CurrentHandle: "HObbit",
     CountryCode: "kz",
     TotalUSDPrize: "796641.25",
-    ImageURL: "CSGOPlayerImages/HObbit.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/HObbit.jpg",
   },
   {
     PlayerId: 10630,
@@ -312,7 +312,7 @@ export const CSGOdata = [
     CurrentHandle: "tarik",
     CountryCode: "us",
     TotalUSDPrize: "791539.21",
-    ImageURL: "CSGOPlayerImages/tarik.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/tarik.jpg",
   },
   {
     PlayerId: 3289,
@@ -321,7 +321,7 @@ export const CSGOdata = [
     CurrentHandle: "kennyS",
     CountryCode: "fr",
     TotalUSDPrize: "734398.91",
-    ImageURL: "CSGOPlayerImages/kennyS.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/kennyS.jpg",
   },
   {
     PlayerId: 31001,
@@ -330,7 +330,7 @@ export const CSGOdata = [
     CurrentHandle: "ZywOo",
     CountryCode: "fr",
     TotalUSDPrize: "710677.81",
-    ImageURL: "CSGOPlayerImages/ZywOo.jpeg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/ZywOo.jpeg",
   },
   {
     PlayerId: 1511,
@@ -339,7 +339,7 @@ export const CSGOdata = [
     CurrentHandle: "Zeus",
     CountryCode: "ua",
     TotalUSDPrize: "689568.70",
-    ImageURL: "CSGOPlayerImages/Zeus.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Zeus.jpg",
   },
   {
     PlayerId: 4998,
@@ -348,7 +348,7 @@ export const CSGOdata = [
     CurrentHandle: "snax",
     CountryCode: "pl",
     TotalUSDPrize: "674887.89",
-    ImageURL: "CSGOPlayerImages/snax.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/snax.jpg",
   },
   {
     PlayerId: 4311,
@@ -357,7 +357,7 @@ export const CSGOdata = [
     CurrentHandle: "Rush",
     CountryCode: "us",
     TotalUSDPrize: "634476.87",
-    ImageURL: "CSGOPlayerImages/Rush.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Rush.jpg",
   },
   {
     PlayerId: 10736,
@@ -366,7 +366,7 @@ export const CSGOdata = [
     CurrentHandle: "Kjaerbye",
     CountryCode: "dk",
     TotalUSDPrize: "623296.93",
-    ImageURL: "CSGOPlayerImages/Kjaerbye.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Kjaerbye.jpg",
   },
   {
     PlayerId: 1485,
@@ -375,7 +375,7 @@ export const CSGOdata = [
     CurrentHandle: "neo",
     CountryCode: "pl",
     TotalUSDPrize: "617331.01",
-    ImageURL: "CSGOPlayerImages/neo.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/neo.jpg",
   },
   {
     PlayerId: 1510,
@@ -384,7 +384,7 @@ export const CSGOdata = [
     CurrentHandle: "Edward",
     CountryCode: "ua",
     TotalUSDPrize: "615858.02",
-    ImageURL: "CSGOPlayerImages/Edward.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Edward.jpg",
   },
   {
     PlayerId: 48581,
@@ -393,7 +393,7 @@ export const CSGOdata = [
     CurrentHandle: "nafany",
     CountryCode: "ru",
     TotalUSDPrize: "608833.92",
-    ImageURL: "CSGOPlayerImages/nafany.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/nafany.jpg",
   },
   {
     PlayerId: 63706,
@@ -402,7 +402,7 @@ export const CSGOdata = [
     CurrentHandle: "sh1ro",
     CountryCode: "ru",
     TotalUSDPrize: "608833.92",
-    ImageURL: "CSGOPlayerImages/sh1ro.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/sh1ro.jpg",
   },
   {
     PlayerId: 3951,
@@ -411,7 +411,7 @@ export const CSGOdata = [
     CurrentHandle: "chrisJ",
     CountryCode: "nl",
     TotalUSDPrize: "608248.79",
-    ImageURL: "CSGOPlayerImages/chrisJ.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/chrisJ.jpg",
   },
   {
     PlayerId: 49036,
@@ -420,7 +420,7 @@ export const CSGOdata = [
     CurrentHandle: "Ax1Le",
     CountryCode: "ru",
     TotalUSDPrize: "608030.28",
-    ImageURL: "CSGOPlayerImages/Ax1Le.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Ax1Le.jpg",
   },
   {
     PlayerId: 1484,
@@ -429,7 +429,7 @@ export const CSGOdata = [
     CurrentHandle: "TaZ",
     CountryCode: "pl",
     TotalUSDPrize: "602078.30",
-    ImageURL: "CSGOPlayerImages/TaZ.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/TaZ.jpg",
   },
   {
     PlayerId: 20727,
@@ -438,7 +438,7 @@ export const CSGOdata = [
     CurrentHandle: "huNter",
     CountryCode: "ba",
     TotalUSDPrize: "592300.65",
-    ImageURL: "CSGOPlayerImages/huNter.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/huNter.jpg",
   },
   {
     PlayerId: 43114,
@@ -447,7 +447,7 @@ export const CSGOdata = [
     CurrentHandle: "sjuush",
     CountryCode: "dk",
     TotalUSDPrize: "586063.09",
-    ImageURL: "CSGOPlayerImages/sjuush.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/sjuush.jpg",
   },
   {
     PlayerId: 5034,
@@ -456,7 +456,7 @@ export const CSGOdata = [
     CurrentHandle: "cadiaN",
     CountryCode: "dk",
     TotalUSDPrize: "583145.73",
-    ImageURL: "CSGOPlayerImages/cadiaN.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/cadiaN.jpg",
   },
   {
     PlayerId: 4997,
@@ -465,7 +465,7 @@ export const CSGOdata = [
     CurrentHandle: "byali",
     CountryCode: "pl",
     TotalUSDPrize: "582459.93",
-    ImageURL: "CSGOPlayerImages/byali.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/byali.jpg",
   },
   {
     PlayerId: 1488,
@@ -474,7 +474,7 @@ export const CSGOdata = [
     CurrentHandle: "pashaBiceps",
     CountryCode: "pl",
     TotalUSDPrize: "578384.06",
-    ImageURL: "CSGOPlayerImages/pashaBiceps.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/pashaBiceps.jpg",
   },
   {
     PlayerId: 1490,
@@ -483,7 +483,7 @@ export const CSGOdata = [
     CurrentHandle: "f0rest",
     CountryCode: "se",
     TotalUSDPrize: "571133.78",
-    ImageURL: "CSGOPlayerImages/f0rest.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/f0rest.jpg",
   },
   {
     PlayerId: 39608,
@@ -492,7 +492,7 @@ export const CSGOdata = [
     CurrentHandle: "Qikert",
     CountryCode: "kz",
     TotalUSDPrize: "557154.13",
-    ImageURL: "CSGOPlayerImages/Qikert.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Qikert.jpg",
   },
   {
     PlayerId: 35077,
@@ -501,7 +501,7 @@ export const CSGOdata = [
     CurrentHandle: "Jame",
     CountryCode: "ru",
     TotalUSDPrize: "554867.72",
-    ImageURL: "CSGOPlayerImages/Jame.jpeg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Jame.jpeg",
   },
   {
     PlayerId: 10485,
@@ -510,7 +510,7 @@ export const CSGOdata = [
     CurrentHandle: "jks",
     CountryCode: "au",
     TotalUSDPrize: "554751.43",
-    ImageURL: "CSGOPlayerImages/jks.png",
+    ImageURL: "PlayerImages/CSGOPlayerImages/jks.png",
   },
   {
     PlayerId: 40798,
@@ -519,7 +519,7 @@ export const CSGOdata = [
     CurrentHandle: "interz",
     CountryCode: "ru",
     TotalUSDPrize: "542076.34",
-    ImageURL: "CSGOPlayerImages/interz.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/interz.jpg",
   },
   {
     PlayerId: 33679,
@@ -528,7 +528,7 @@ export const CSGOdata = [
     CurrentHandle: "stavn",
     CountryCode: "dk",
     TotalUSDPrize: "525037.63",
-    ImageURL: "CSGOPlayerImages/stavn.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/stavn.jpg",
   },
   {
     PlayerId: 3293,
@@ -537,7 +537,7 @@ export const CSGOdata = [
     CurrentHandle: "RpK",
     CountryCode: "fr",
     TotalUSDPrize: "524870.95",
-    ImageURL: "CSGOPlayerImages/RpK.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/RpK.jpg",
   },
   {
     PlayerId: 1492,
@@ -546,7 +546,7 @@ export const CSGOdata = [
     CurrentHandle: "GeT_RiGhT",
     CountryCode: "se",
     TotalUSDPrize: "519015.39",
-    ImageURL: "CSGOPlayerImages/GeT_RiGhT.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/GeT_RiGhT.jpg",
   },
   {
     PlayerId: 18811,
@@ -555,7 +555,7 @@ export const CSGOdata = [
     CurrentHandle: "k0nfig",
     CountryCode: "dk",
     TotalUSDPrize: "518805.81",
-    ImageURL: "CSGOPlayerImages/k0nfig.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/k0nfig.jpg",
   },
   {
     PlayerId: 2440,
@@ -564,7 +564,7 @@ export const CSGOdata = [
     CurrentHandle: "Xizt",
     CountryCode: "se",
     TotalUSDPrize: "513805.74",
-    ImageURL: "CSGOPlayerImages/Xizt.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Xizt.jpg",
   },
   {
     PlayerId: 11483,
@@ -573,7 +573,7 @@ export const CSGOdata = [
     CurrentHandle: "stanislaw",
     CountryCode: "ca",
     TotalUSDPrize: "510120.72",
-    ImageURL: "CSGOPlayerImages/stanislaw.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/stanislaw.jpg",
   },
   {
     PlayerId: 41398,
@@ -582,7 +582,7 @@ export const CSGOdata = [
     CurrentHandle: "TeSeS",
     CountryCode: "dk",
     TotalUSDPrize: "509640.92",
-    ImageURL: "CSGOPlayerImages/TeSeS.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/TeSeS.jpg",
   },
   {
     PlayerId: 35378,
@@ -591,7 +591,7 @@ export const CSGOdata = [
     CurrentHandle: "Buster",
     CountryCode: "kz",
     TotalUSDPrize: "491400.80",
-    ImageURL: "CSGOPlayerImages/Buster.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Buster.jpg",
   },
   {
     PlayerId: 3889,
@@ -600,7 +600,7 @@ export const CSGOdata = [
     CurrentHandle: "Happy",
     CountryCode: "fr",
     TotalUSDPrize: "485910.46",
-    ImageURL: "CSGOPlayerImages/Happy.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Happy.jpg",
   },
   {
     PlayerId: 12859,
@@ -609,7 +609,7 @@ export const CSGOdata = [
     CurrentHandle: "Lekr0",
     CountryCode: "se",
     TotalUSDPrize: "484880.51",
-    ImageURL: "CSGOPlayerImages/Lekr0.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Lekr0.jpg",
   },
   {
     PlayerId: 11938,
@@ -618,7 +618,7 @@ export const CSGOdata = [
     CurrentHandle: "autimatic",
     CountryCode: "us",
     TotalUSDPrize: "463910.29",
-    ImageURL: "CSGOPlayerImages/autimatic.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/autimatic.jpg",
   },
   {
     PlayerId: 28556,
@@ -627,7 +627,7 @@ export const CSGOdata = [
     CurrentHandle: "Golden",
     CountryCode: "se",
     TotalUSDPrize: "461342.48",
-    ImageURL: "CSGOPlayerImages/Golden.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Golden.jpg",
   },
   {
     PlayerId: 21291,
@@ -636,7 +636,7 @@ export const CSGOdata = [
     CurrentHandle: "REZ",
     CountryCode: "se",
     TotalUSDPrize: "443411.65",
-    ImageURL: "CSGOPlayerImages/REZ.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/REZ.jpg",
   },
   {
     PlayerId: 3752,
@@ -645,7 +645,7 @@ export const CSGOdata = [
     CurrentHandle: "Skadoodle",
     CountryCode: "us",
     TotalUSDPrize: "436879.98",
-    ImageURL: "CSGOPlayerImages/Skadoodle.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Skadoodle.jpg",
   },
   {
     PlayerId: 28489,
@@ -654,7 +654,7 @@ export const CSGOdata = [
     CurrentHandle: "Brehze",
     CountryCode: "us",
     TotalUSDPrize: "430734.67",
-    ImageURL: "CSGOPlayerImages/Brehze.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Brehze.jpg",
   },
   {
     PlayerId: 3287,
@@ -663,7 +663,7 @@ export const CSGOdata = [
     CurrentHandle: "friberg",
     CountryCode: "se",
     TotalUSDPrize: "430065.49",
-    ImageURL: "CSGOPlayerImages/friberg.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/friberg.jpg",
   },
   {
     PlayerId: 2450,
@@ -672,7 +672,7 @@ export const CSGOdata = [
     CurrentHandle: "allu",
     CountryCode: "fi",
     TotalUSDPrize: "428487.87",
-    ImageURL: "CSGOPlayerImages/allu.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/allu.jpg",
   },
   {
     PlayerId: 3676,
@@ -681,7 +681,7 @@ export const CSGOdata = [
     CurrentHandle: "AdreN",
     CountryCode: "kz",
     TotalUSDPrize: "424455.65",
-    ImageURL: "CSGOPlayerImages/AdreN.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/AdreN.jpg",
   },
   {
     PlayerId: 12179,
@@ -690,7 +690,7 @@ export const CSGOdata = [
     CurrentHandle: "boltz",
     CountryCode: "br",
     TotalUSDPrize: "421658.17",
-    ImageURL: "CSGOPlayerImages/boltz.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/boltz.jpg",
   },
   {
     PlayerId: 6366,
@@ -699,7 +699,7 @@ export const CSGOdata = [
     CurrentHandle: "JaCkz",
     CountryCode: "fr",
     TotalUSDPrize: "419814.54",
-    ImageURL: "CSGOPlayerImages/JaCkz.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/JaCkz.jpg",
   },
   {
     PlayerId: 4996,
@@ -708,7 +708,7 @@ export const CSGOdata = [
     CurrentHandle: "cajunb",
     CountryCode: "dk",
     TotalUSDPrize: "418465.86",
-    ImageURL: "CSGOPlayerImages/cajunb.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/cajunb.jpg",
   },
   {
     PlayerId: 3952,
@@ -717,7 +717,7 @@ export const CSGOdata = [
     CurrentHandle: "tabseN",
     CountryCode: "de",
     TotalUSDPrize: "417972.45",
-    ImageURL: "CSGOPlayerImages/tabseN.jpeg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/tabseN.jpeg",
   },
   {
     PlayerId: 13134,
@@ -726,7 +726,7 @@ export const CSGOdata = [
     CurrentHandle: "XANTARES",
     CountryCode: "tr",
     TotalUSDPrize: "416835.93",
-    ImageURL: "CSGOPlayerImages/XANTARES.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/XANTARES.jpg",
   },
   {
     PlayerId: 37953,
@@ -735,7 +735,7 @@ export const CSGOdata = [
     CurrentHandle: "YEKINDAR",
     CountryCode: "lv",
     TotalUSDPrize: "415389.57",
-    ImageURL: "CSGOPlayerImages/YEKINDAR.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/YEKINDAR.jpg",
   },
   {
     PlayerId: 30622,
@@ -744,7 +744,7 @@ export const CSGOdata = [
     CurrentHandle: "CeRq",
     CountryCode: "bg",
     TotalUSDPrize: "412263.38",
-    ImageURL: "CSGOPlayerImages/CeRq.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/CeRq.jpg",
   },
   {
     PlayerId: 20813,
@@ -753,7 +753,7 @@ export const CSGOdata = [
     CurrentHandle: "Aleksib",
     CountryCode: "fi",
     TotalUSDPrize: "407191.03",
-    ImageURL: "CSGOPlayerImages/Aleksib.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Aleksib.jpg",
   },
   {
     PlayerId: 22335,
@@ -762,7 +762,7 @@ export const CSGOdata = [
     CurrentHandle: "nexa",
     CountryCode: "rs",
     TotalUSDPrize: "405321.50",
-    ImageURL: "CSGOPlayerImages/nexa.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/nexa.jpg",
   },
   {
     PlayerId: 29711,
@@ -771,7 +771,7 @@ export const CSGOdata = [
     CurrentHandle: "Ethan",
     CountryCode: "us",
     TotalUSDPrize: "399880.38",
-    ImageURL: "CSGOPlayerImages/Ethan.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Ethan.jpg",
   },
   {
     PlayerId: 2456,
@@ -780,7 +780,7 @@ export const CSGOdata = [
     CurrentHandle: "fnx",
     CountryCode: "br",
     TotalUSDPrize: "394779.80",
-    ImageURL: "CSGOPlayerImages/fnx.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/fnx.jpg",
   },
   {
     PlayerId: 17622,
@@ -789,7 +789,7 @@ export const CSGOdata = [
     CurrentHandle: "Amanek",
     CountryCode: "fr",
     TotalUSDPrize: "394202.14",
-    ImageURL: "CSGOPlayerImages/Amanek.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Amanek.jpg",
   },
   {
     PlayerId: 17801,
@@ -798,7 +798,7 @@ export const CSGOdata = [
     CurrentHandle: "Valde",
     CountryCode: "dk",
     TotalUSDPrize: "392356.37",
-    ImageURL: "CSGOPlayerImages/Valde.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Valde.jpg",
   },
   {
     PlayerId: 3998,
@@ -807,7 +807,7 @@ export const CSGOdata = [
     CurrentHandle: "KIOSHIMA",
     CountryCode: "fr",
     TotalUSDPrize: "378804.11",
-    ImageURL: "CSGOPlayerImages/KIOSHIMA.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/KIOSHIMA.jpg",
   },
   {
     PlayerId: 24832,
@@ -816,7 +816,7 @@ export const CSGOdata = [
     CurrentHandle: "frozen",
     CountryCode: "sk",
     TotalUSDPrize: "374131.99",
-    ImageURL: "CSGOPlayerImages/frozen.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/frozen.jpg",
   },
   {
     PlayerId: 5472,
@@ -825,7 +825,7 @@ export const CSGOdata = [
     CurrentHandle: "oskar",
     CountryCode: "cz",
     TotalUSDPrize: "370309.44",
-    ImageURL: "CSGOPlayerImages/oskar.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/oskar.jpg",
   },
   {
     PlayerId: 2494,
@@ -834,7 +834,7 @@ export const CSGOdata = [
     CurrentHandle: "dennis",
     CountryCode: "se",
     TotalUSDPrize: "366702.68",
-    ImageURL: "CSGOPlayerImages/dennis.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/dennis.jpg",
   },
   {
     PlayerId: 12173,
@@ -843,7 +843,7 @@ export const CSGOdata = [
     CurrentHandle: "felps",
     CountryCode: "br",
     TotalUSDPrize: "363355.43",
-    ImageURL: "CSGOPlayerImages/felps.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/felps.jpg",
   },
   {
     PlayerId: 5433,
@@ -852,7 +852,7 @@ export const CSGOdata = [
     CurrentHandle: "STYKO",
     CountryCode: "sk",
     TotalUSDPrize: "363202.41",
-    ImageURL: "CSGOPlayerImages/STYKO.jpeg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/STYKO.jpeg",
   },
   {
     PlayerId: 37663,
@@ -861,7 +861,7 @@ export const CSGOdata = [
     CurrentHandle: "Brollan",
     CountryCode: "se",
     TotalUSDPrize: "353125.84",
-    ImageURL: "CSGOPlayerImages/Brollan.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/Brollan.jpg",
   },
   {
     PlayerId: 3673,
@@ -870,7 +870,7 @@ export const CSGOdata = [
     CurrentHandle: "MSL",
     CountryCode: "dk",
     TotalUSDPrize: "349442.38",
-    ImageURL: "CSGOPlayerImages/MSL.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/MSL.jpg",
   },
   {
     PlayerId: 4587,
@@ -879,7 +879,7 @@ export const CSGOdata = [
     CurrentHandle: "seized",
     CountryCode: "ru",
     TotalUSDPrize: "346710.81",
-    ImageURL: "CSGOPlayerImages/seized.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/seized.jpg",
   },
   {
     PlayerId: 9565,
@@ -888,7 +888,7 @@ export const CSGOdata = [
     CurrentHandle: "bodyy",
     CountryCode: "fr",
     TotalUSDPrize: "342199.54",
-    ImageURL: "CSGOPlayerImages/bodyy.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/bodyy.jpg",
   },
   {
     PlayerId: 5035,
@@ -897,6 +897,6 @@ export const CSGOdata = [
     CurrentHandle: "aizy",
     CountryCode: "dk",
     TotalUSDPrize: "334996.67",
-    ImageURL: "CSGOPlayerImages/aizy.jpg",
+    ImageURL: "PlayerImages/CSGOPlayerImages/aizy.jpg",
   },
 ];

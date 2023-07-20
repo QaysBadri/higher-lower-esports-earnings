@@ -349,7 +349,7 @@ body {
   width: 250px;
   height: 70px;
   border-radius: 15px;
-  top: 40%;
+  top: 46%;
   left: 40%;
   font-size: 1.7rem;
   font-family: "Source Sans 3", sans-serif;
@@ -369,13 +369,6 @@ body {
 
 #csgo-button:disabled {
   cursor: not-allowed;
-}
-
-#coming-soon {
-  position: fixed;
-  font-size: 20px;
-  top: 49%;
-  left: 47.5%;
 }
 
 #logo {
@@ -660,15 +653,8 @@ body {
     height: 190px;
   }
 
-  #coming-soon {
-    position: fixed;
-    font-size: 15px;
-    top: 49%;
-    left: 38%;
-  }
-
   #csgo-button {
-    top: 40%;
+    top: 43%;
     left: -2%;
     width: 200px;
     height: 50px;
@@ -845,15 +831,8 @@ body {
     height: 190px;
   }
 
-  #coming-soon {
-    position: fixed;
-    font-size: 15px;
-    top: 49%;
-    left: 38%;
-  }
-
   #csgo-button {
-    top: 35%;
+    top: 43%;
     left: 0%;
     width: 200px;
     height: 60px;
@@ -1030,15 +1009,8 @@ body {
     height: 210px;
   }
 
-  #coming-soon {
-    position: fixed;
-    font-size: 20px;
-    top: 48%;
-    left: 39%;
-  }
-
   #csgo-button {
-    top: 38%;
+    top: 43%;
     left: 13%;
     width: 200px;
     height: 60px;
@@ -1213,15 +1185,8 @@ body {
     height: 270px;
   }
 
-  #coming-soon {
-    position: fixed;
-    font-size: 20px;
-    top: 48%;
-    left: 40%;
-  }
-
   #csgo-button {
-    top: 37%;
+    top: 43%;
     left: 23%;
     width: 220px;
     height: 65px;
@@ -1395,15 +1360,8 @@ body {
     left: 27.5%;
   }
 
-  #coming-soon {
-    position: fixed;
-    font-size: 20px;
-    top: 49%;
-    left: 45%;
-  }
-
   #csgo-button {
-    top: 37%;
+    top: 43%;
     left: 27%;
   }
 
@@ -1531,14 +1489,8 @@ body {
     left: 33%;
   }
 
-  #coming-soon {
-    position: fixed;
-    top: 48%;
-    left: 46%;
-  }
-
   #csgo-button {
-    top: 37%;
+    top: 43%;
     left: 33%;
   }
 

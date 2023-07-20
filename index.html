@@ -7,44 +7,32 @@
     <title>The Higher Lower Game: Esport Earnings</title>
     <link rel="icon" type="img/png" href="Images/favicon.png" />
     <script type="module" src="script.js" defer></script>
-    <script type="module" src="CSGOdata.js" defer></script>
   </head>
   <body>
     <div class="front-page">
       <div id="logo"></div>
       <div id="logo-border"></div>
-      <div id="coming-soon">Coming Soon:</div>
-      <button onclick="location.href = 'csgo.html'; " id="csgo-button">
+      <button onclick="setGameAndRedirect('CSGO');" id="csgo-button">
         CS:GO
       </button>
-      <button
-        onclick="location.href = 'dota2.html'; "
-        id="dota2-button"
-        disabled
-      >
+      <button onclick="setGameAndRedirect('DOTA2');" id="dota2-button">
         Dota 2
       </button>
-      <button
-        onclick="location.href = 'fortnite.html'; "
-        id="fortnite-button"
-        disabled
-      >
+      <button onclick="setGameAndRedirect('FORTNITE');" id="fortnite-button">
         Fortnite
       </button>
-      <button
-        onclick="location.href = 'valorant.html'; "
-        id="valorant-button"
-        disabled
-      >
+      <button onclick="setGameAndRedirect('VALORANT');" id="valorant-button">
         Valorant
       </button>
-      <button
-        onclick="location.href = 'league.html'; "
-        id="league-button"
-        disabled
-      >
+      <button onclick="setGameAndRedirect('LEAGUE');" id="league-button">
         League
       </button>
+      <script>
+        function setGameAndRedirect(newGame) {
+          localStorage.setItem("game", newGame);
+          window.location.href = "game.html";
+        }
+      </script>
     </div>
   </body>
 </html>

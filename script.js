@@ -1,10 +1,24 @@
-import { CSGOdata } from "./CSGOdata.js";
+import { CSGOdata } from "./Data/CSGOdata.js";
+import { DOTA2data } from "./Data/DOTA2data.js";
+import { FORTNITEdata } from "./Data/FORTNITEdata.js";
+import { VALORANTdata } from "./Data/VALORANTdata.js";
+import { LEAGUEdata } from "./Data/LEAGUEdata.js";
+
+let game = localStorage.getItem("game");
 
 let highScore = 0;
 let score = 0;
 let player1, player2;
 let currentHighScore = 0;
 let gameOverScoreValue = 0;
+
+const gameData = {
+  CSGO: CSGOdata,
+  DOTA2: DOTA2data,
+  FORTNITE: FORTNITEdata,
+  VALORANT: VALORANTdata,
+  LEAGUE: LEAGUEdata,
+};
 
 const higherBtn = document.getElementById("higher-button");
 const lowerBtn = document.getElementById("lower-button");
@@ -35,18 +49,32 @@ function updatePlayerInfo() {
   const leftName = document.getElementById("left-name");
   const leftEarnings = document.getElementById("left-earnings");
   const rightName = document.getElementById("right-name");
-  const currentHandle = CSGOdata[player1].CurrentHandle;
-  const currentHandle2 = CSGOdata[player2].CurrentHandle;
+  const currentHandle = gameData[game][player1].CurrentHandle;
+  const currentHandle2 = gameData[game][player2].CurrentHandle;
   const leftIMG = document.getElementById("left-panel");
   const rightIMG = document.getElementById("right-panel");
 
-  leftName.innerHTML = `${CSGOdata[player1].NameFirst} "<span class="player-handle-color">${currentHandle}</span>" ${CSGOdata[player1].NameLast}`;
+  leftName.innerHTML = `${gameData[game][player1].NameFirst} "<span class="player-handle-color">${currentHandle}</span>" ${gameData[game][player1].NameLast}`;
   leftEarnings.textContent =
-    "$" + addCommasToNumber(CSGOdata[player1].TotalUSDPrize);
-  rightName.innerHTML = `${CSGOdata[player2].NameFirst} "<span class="player-handle-color">${currentHandle2}</span>" ${CSGOdata[player2].NameLast}`;
+    "$" + addCommasToNumber(gameData[game][player1].TotalUSDPrize);
+  rightName.innerHTML = `${gameData[game][player2].NameFirst} "<span class="player-handle-color">${currentHandle2}</span>" ${gameData[game][player2].NameLast}`;
 
-  leftIMG.style.background = `url(${CSGOdata[player1].ImageURL})`;
-  rightIMG.style.background = `url(${CSGOdata[player2].ImageURL})`;
+  if (
+    gameData[game][player1].ImageURL == undefined &&
+    gameData[game][player2].ImageURL == undefined
+  ) {
+    leftIMG.style.background = `url(Images/unknown-person.jpg)`;
+    rightIMG.style.background = `url(Images/unknown-person.jpg)`;
+  } else if (gameData[game][player1].ImageURL == undefined) {
+    leftIMG.style.background = `url(Images/unknown-person.jpg)`;
+    rightIMG.style.background = `url(${gameData[game][player2].ImageURL})`;
+  } else if (gameData[game][player2].ImageURL == undefined) {
+    leftIMG.style.background = `url(${gameData[game][player1].ImageURL})`;
+    rightIMG.style.background = `url(Images/unknown-person.jpg)`;
+  } else {
+    leftIMG.style.background = `url(${gameData[game][player1].ImageURL})`;
+    rightIMG.style.background = `url(${gameData[game][player2].ImageURL})`;
+  }
   leftIMG.style.backgroundRepeat = "no-repeat";
   rightIMG.style.backgroundRepeat = "no-repeat";
   leftIMG.style.backgroundSize = "cover";
@@ -65,7 +93,7 @@ function hideEarningsOnRightPanel() {
 function animateCountingOnRightPanelEarnings() {
   return new Promise((resolve) => {
     const rightEarnings = document.getElementById("right-earnings");
-    const rightEarningsValue = Number(CSGOdata[player2].TotalUSDPrize);
+    const rightEarningsValue = Number(gameData[game][player2].TotalUSDPrize);
     const animationDuration = 1500;
     const frameDuration = 16;
 
@@ -109,8 +137,8 @@ function removeButtons() {
 function updateScore(isHigher) {
   if (
     isHigher ==
-    Number(CSGOdata[player2].TotalUSDPrize) >
-      Number(CSGOdata[player1].TotalUSDPrize)
+    Number(gameData[game][player2].TotalUSDPrize) >
+      Number(gameData[game][player1].TotalUSDPrize)
   ) {
     score++;
     scoreValue.textContent = score;
@@ -233,11 +261,15 @@ function setupPageForInitialLoad() {
   pullHighScoreFromLocalStorage();
   getNewPlayersForBothPanels();
 
-  hideGameOver();
-  highScoreValue.textContent = highScore;
-  scoreValue.textContent = score;
+  if (gameOver) {
+    hideGameOver();
+  }
 
-  updatePlayerInfo();
+  if (scoreValue) {
+    highScoreValue.textContent = highScore;
+    scoreValue.textContent = score;
+    updatePlayerInfo();
+  }
 }
 
 async function handleGameRound(isHigher) {
@@ -262,12 +294,18 @@ async function handleGameRound(isHigher) {
 
 window.addEventListener("DOMContentLoaded", setupPageForInitialLoad);
 
-higherBtn.addEventListener("click", function () {
-  handleGameRound(true);
-});
+if (higherBtn) {
+  higherBtn.addEventListener("click", function () {
+    handleGameRound(true);
+  });
+}
 
-lowerBtn.addEventListener("click", function () {
-  handleGameRound(false);
-});
+if (lowerBtn) {
+  lowerBtn.addEventListener("click", function () {
+    handleGameRound(false);
+  });
+}
 
-tryAgainBtn.addEventListener("click", resetGame);
+if (tryAgainBtn) {
+  tryAgainBtn.addEventListener("click", resetGame);
+}
