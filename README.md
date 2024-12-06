@@ -1,5 +1,4 @@
 # higher-lower-esports-earnings
-[Live Demo](https://qaysbadri.github.io/higher-lower-esports-earnings/)
 
 Higher Lower Esport Earnings is a fun and engaging web-based game inspired by the popular "Higher Lower" concept. Test your knowledge of professional esports players' earnings as you guess whether the next player has higher or lower total prize earnings.
 
