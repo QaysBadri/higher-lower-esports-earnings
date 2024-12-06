@@ -3,36 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>The Higher Lower Game: Esport Earnings</title>
-    <link rel="icon" type="img/png" href="Images/favicon.png" />
-    <script type="module" src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="Images/favicon.png" />
   </head>
   <body>
-    <div class="front-page">
-      <div id="logo"></div>
-      <div id="logo-border"></div>
-      <button onclick="setGameAndRedirect('CSGO');" id="csgo-button">
-        CS:GO
-      </button>
-      <button onclick="setGameAndRedirect('DOTA2');" id="dota2-button">
-        Dota 2
-      </button>
-      <button onclick="setGameAndRedirect('FORTNITE');" id="fortnite-button">
-        Fortnite
-      </button>
-      <button onclick="setGameAndRedirect('VALORANT');" id="valorant-button">
-        Valorant
-      </button>
-      <button onclick="setGameAndRedirect('LEAGUE');" id="league-button">
-        League
-      </button>
-      <script>
-        function setGameAndRedirect(newGame) {
-          localStorage.setItem("game", newGame);
-          window.location.href = "game.html";
-        }
-      </script>
-    </div>
+    <div class="main-container">
+      <div class="logo-container">
+        <img src="Images/logo.svg" alt="Higher Lower Game Logo" class="logo" />
+      </div>
+      <div class="game-selection">
+        <button class="game-button" onclick="setGameAndRedirect('CSGO')">CS:GO</button>
+        <button class="game-button" onclick="setGameAndRedirect('DOTA2')">Dota 2</button>
+        <button class="game-button" onclick="setGameAndRedirect('FORTNITE')">Fortnite</button>
+        <button class="game-button" onclick="setGameAndRedirect('VALORANT')">Valorant</button>
+        <button class="game-button" onclick="setGameAndRedirect('LEAGUE')">League</button>
+      </div> 
+    <script>
+      function setGameAndRedirect(game) {
+        localStorage.setItem("game", game);
+        window.location.href = "game.html";
+      }
+    </script>
   </body>
 </html>

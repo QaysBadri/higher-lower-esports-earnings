@@ -1,1516 +1,245 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap");
-
-@keyframes scale-up {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes scale-down {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-image: url("Images/trophy-hold.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  filter: blur(1.5px);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #fff;
+  background: linear-gradient(to bottom right, #1a1a2e, #16213e);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin: 0;
-  font-family: "Source Sans 3", sans-serif;
-  color: azure;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-#circle {
-  background: #25252a;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  z-index: 1;
-  transition: ease-out 0.5s;
-}
-
-#inner-circle {
-  color: silver;
+.game-container {
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 40px;
-  z-index: 1;
+  gap: 20px;
 }
 
-#high-score {
-  position: fixed;
-  bottom: 1%;
-  left: 1%;
-  font-size: 35px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-#fire-animation {
-  position: fixed;
-  bottom: -2%;
-  right: -0.9%;
-  width: 120px;
-  height: 200px;
-  transform: scale(0);
-  background-image: url("Images/fireAnimation.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-}
-
+#high-score,
 #score {
-  position: fixed;
-  bottom: 1%;
-  right: 1%;
-  font-size: 35px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
-#left-panel {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 50%;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  filter: blur(2px);
+.panel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
 }
 
-#right-panel {
-  position: fixed;
-  top: 0px;
+.player-panel {
+  flex: 1;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.player-info {
+  position: absolute;
+  bottom: 10px;
   left: 50%;
-  width: 50%;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  filter: blur(2px);
-}
-
-.player-handle-color {
-  color: #a7900d;
-}
-
-#left-name {
-  position: fixed;
-  top: 40%;
-  left: 25%;
-  font-size: 70px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
   transform: translateX(-50%);
-  transform-origin: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
 }
 
-#right-name {
-  position: fixed;
-  top: 40%;
-  right: 25%;
-  font-size: 70px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  transform: translateX(50%);
-  transform-origin: center;
+.player-name {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-#left-has {
-  position: fixed;
-  top: 47%;
-  left: 25%;
-  font-size: 25px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  transform: translateX(-50%);
-  transform-origin: center;
+.player-handle {
+  color: #f9a826;
 }
 
-#right-has {
-  position: fixed;
-  top: 47%;
-  right: 25%;
-  font-size: 25px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  transform: translateX(50%);
-  transform-origin: center;
+.player-earnings {
+  font-size: 2rem;
+  color: #21bf73;
+  margin: 10px 0;
 }
 
-#left-earnings {
-  position: fixed;
-  top: 49%;
-  left: 25%;
-  font-size: 90px;
-  color: #396d14;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  transform: translateX(-50%);
-  transform-origin: center;
+.vs-circle {
+  width: 100px;
+  height: 100px;
+  background: #16213e;
+  border: 5px solid #21bf73;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
-#right-earnings {
-  position: fixed;
-  top: 49%;
-  right: 25%;
-  font-size: 120px;
-  color: #396d14;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  transform: translateX(50%);
-  transform-origin: center;
+.vs-circle.correct {
+  background: #21bf73;
+  color: #fff;
 }
 
-#left-bottom-text {
-  position: fixed;
-  top: 58%;
-  left: 25%;
-  font-size: 25px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  transform: translateX(-50%);
-  transform-origin: center;
+.vs-circle.wrong {
+  background: #e63946;
+  color: #fff;
 }
 
-#right-bottom-text {
-  position: fixed;
-  top: 60%;
-  right: 25%;
-  font-size: 25px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  transform: translateX(50%);
-  transform-origin: center;
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.action-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #higher-button {
-  position: fixed;
-  background-color: #25252a;
-  color: white;
-  width: 200px;
-  height: 60px;
-  border-radius: 4px;
-  top: 50%;
-  right: 25%;
-  font-size: 1.7rem;
-  font-family: "Source Sans 3", sans-serif;
-  transform: translateX(50%);
-  transform-origin: center;
-  transition: ease-out 0.3s;
-  border: 3px solid #396d14;
-  z-index: 1;
+  background: #21bf73;
+  color: #fff;
 }
 
 #higher-button:hover {
-  color: #fff;
-  cursor: pointer;
-}
-
-#higher-button:before {
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  content: "";
-  background-color: #396d14;
-}
-
-#higher-button:hover:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  z-index: -1;
+  background: #28c76f;
+  transform: translateY(-3px);
 }
 
 #lower-button {
-  position: fixed;
-  width: 200px;
-  height: 60px;
-  color: white;
-  border-radius: 4px;
-  background-color: #25252a;
-  top: 55%;
-  right: 25%;
-  font-size: 1.7rem;
-  font-family: "Source Sans 3", sans-serif;
-  transform: translateX(50%);
-  transform-origin: center;
-  border: 3px solid #9e180c;
-  z-index: 1;
-  transition: ease-out 0.3s;
+  background: #e63946;
+  color: #fff;
 }
 
 #lower-button:hover {
+  background: #ff4b5c;
+  transform: translateY(-3px);
+}
+
+.game-over-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.retry-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background: #16213e;
   color: #fff;
+  border: 2px solid #21bf73;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-#lower-button:before {
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  content: "";
-  background-color: #9e180c;
+.retry-button:hover {
+  background: #21bf73;
+  color: #16213e;
 }
 
-#lower-button:hover:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  z-index: -1;
-}
-
-#game-over {
-  position: fixed;
-  font-size: 20px;
-  transform: translateX(5%);
-  top: 65%;
-  left: 47.5%;
-}
-
-#game-over-score {
-  position: fixed;
-  font-size: 20px;
-  top: 67%;
-  left: 47.5%;
-}
-
-#try-again {
-  position: fixed;
-  background-color: #25252a;
-  color: white;
-  width: 250px;
-  height: 70px;
-  border-radius: 15px;
-  top: 70%;
-  left: 40%;
-  font-size: 1.7rem;
-  font-family: "Source Sans 3", sans-serif;
-  transform: translateX(50%);
-  transform-origin: center;
-  transition: ease-out 0.5s;
-  border: 3px solid #fba90a;
-  box-shadow: inset 0 0 0 #fba90a;
-  z-index: 1;
-}
-
-#try-again:hover {
-  color: #fff;
-  cursor: pointer;
-  box-shadow: inset 300px 0 0 0 #fba90a;
-}
-
-#csgo-button {
-  position: fixed;
-  background-color: #25252a;
-  color: white;
-  width: 250px;
-  height: 70px;
-  border-radius: 15px;
-  top: 46%;
-  left: 40%;
-  font-size: 1.7rem;
-  font-family: "Source Sans 3", sans-serif;
-  transform: translateX(50%);
-  transform-origin: center;
-  transition: ease-out 0.5s;
-  border: 3px solid #fba90a;
-  box-shadow: inset 0 0 0 #fba90a;
-  z-index: 1;
-}
-
-#csgo-button:hover {
-  color: #fff;
-  cursor: pointer;
-  box-shadow: inset 300px 0 0 0 #fba90a;
-}
-
-#csgo-button:disabled {
-  cursor: not-allowed;
-}
-
-#logo {
-  position: fixed;
-  transform: scale(1.8);
-  top: 30%;
-  left: 50%;
-  width: 500px;
-  height: 500px;
-  z-index: 1;
-  background-image: url("Images/logo.svg");
-  background-repeat: no-repeat;
-}
-
-#logo-border {
-  position: fixed;
-  transform: scale(1);
-  top: 11%;
-  left: 40.2%;
-  width: 500px;
-  height: 340px;
-  z-index: -1;
-  background-color: #25252a;
-  border-radius: 5%;
-}
-
-#dota2-button {
-  position: fixed;
-  background-color: #25252a;
-  color: white;
-  width: 250px;
-  height: 70px;
-  border-radius: 15px;
-  top: 52%;
-  left: 40%;
-  font-size: 1.7rem;
-  font-family: "Source Sans 3", sans-serif;
-  transform: translateX(50%);
-  transform-origin: center;
-  transition: ease-out 0.5s;
-  border: 3px solid #a72714;
-  box-shadow: inset 0 0 0 #a72714;
-  z-index: 1;
-}
-
-#dota2-button:hover {
-  color: #fff;
-  cursor: pointer;
-  box-shadow: inset 300px 0 0 0 #a72714;
-}
-
-#dota2-button:disabled {
-  cursor: not-allowed;
-}
-
-#fortnite-button {
-  position: fixed;
-  background-color: #25252a;
-  color: white;
-  width: 250px;
-  height: 70px;
-  border-radius: 15px;
-  top: 58%;
-  left: 40%;
-  font-size: 1.7rem;
-  font-family: "Source Sans 3", sans-serif;
-  transform: translateX(50%);
-  transform-origin: center;
-  transition: ease-out 0.5s;
-  border: 3px solid #9d4dbb;
-  box-shadow: inset 0 0 0 #9d4dbb;
-  z-index: 1;
-}
-
-#fortnite-button:hover {
-  color: #fff;
-  cursor: pointer;
-  box-shadow: inset 300px 0 0 0 #9d4dbb;
-}
-
-#fortnite-button:disabled {
-  cursor: not-allowed;
-}
-
-#valorant-button {
-  position: fixed;
-  background-color: #25252a;
-  color: white;
-  width: 250px;
-  height: 70px;
-  border-radius: 15px;
-  top: 64%;
-  left: 40%;
-  font-size: 1.7rem;
-  font-family: "Source Sans 3", sans-serif;
-  transform: translateX(50%);
-  transform-origin: center;
-  transition: ease-out 0.5s;
-  border: 3px solid #fd4556;
-  box-shadow: inset 0 0 0 #fd4556;
-  z-index: 1;
-}
-
-#valorant-button:hover {
-  color: #fff;
-  cursor: pointer;
-  box-shadow: inset 300px 0 0 0 #fd4556;
-}
-
-#valorant-button:disabled {
-  cursor: not-allowed;
-}
-
-#league-button {
-  position: fixed;
-  background-color: #25252a;
-  color: white;
-  width: 250px;
-  height: 70px;
-  border-radius: 15px;
-  top: 70%;
-  left: 40%;
-  font-size: 1.7rem;
-  font-family: "Source Sans 3", sans-serif;
-  transform: translateX(50%);
-  transform-origin: center;
-  transition: ease-out 0.7s;
-  border: 3px solid #001a6c;
-  box-shadow: inset 0 0 0 #001a6c;
-  z-index: 1;
-}
-
-#league-button:hover {
-  color: #fff;
-  cursor: pointer;
-  box-shadow: inset 300px 0 0 0 #001a6c;
-}
-
-#league-button:disabled {
-  cursor: not-allowed;
-}
-
-@media (min-width: 0px) and (max-width: 380px) {
-  #circle {
-    width: 50px;
-    height: 50px;
-  }
-
-  #inner-circle {
-    font-size: 18px;
-  }
-
-  #high-score {
-    font-size: 17px;
-  }
-
-  #score {
-    font-size: 17px;
-  }
-
-  #left-name {
-    font-size: 20px;
-    top: 19vh;
-    left: 50%;
-    white-space: nowrap;
-  }
-
-  #left-has {
-    font-size: 10px;
-    top: 23vh;
-    left: 50%;
-  }
-
-  #left-earnings {
-    font-size: 35px;
-    top: 24vh;
-    left: 50%;
-  }
-
-  #left-bottom-text {
-    font-size: 10px;
-    top: 31vh;
-    left: 50%;
-  }
-
-  #right-name {
-    font-size: 15px;
-    top: 65vh;
-    right: 50%;
-    white-space: nowrap;
-  }
-
-  #right-has {
-    font-size: 10px;
-    top: 68vh;
-    right: 50%;
-  }
-
-  #right-earnings {
-    font-size: 45px;
-    top: 71vh;
-    right: 50%;
-  }
-
-  #right-bottom-text {
-    font-size: 10px;
-    top: 81vh;
-    right: 50%;
-  }
-
-  #higher-button {
-    width: 100px;
-    height: 30px;
-    font-size: 0.8rem;
-    top: 71vh;
-    right: 50%;
-  }
-
-  #lower-button {
-    width: 100px;
-    height: 30px;
-    font-size: 0.8rem;
-    top: 76vh;
-    right: 50%;
-  }
-
-  #game-over {
-    font-size: 10px;
-    transform: translateX(5%);
-    top: 46%;
-    left: 69%;
-  }
-
-  #game-over-score {
-    font-size: 10px;
-    top: 48%;
-    left: 69%;
-  }
-
-  #try-again {
-    width: 100px;
-    height: 30px;
-    top: 51%;
-    left: 50%;
-    font-size: 0.8rem;
-  }
-
-  #left-panel {
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 50vh;
-    filter: blur(1px);
-  }
-
-  #right-panel {
-    top: 50vh;
-    left: 0px;
-    width: 100%;
-    height: 50vh;
-    filter: blur(1px);
-  }
-
-  #fire-animation {
-    transform: scale(0.1);
-    bottom: -6%;
-    right: -12%;
-  }
-
-  #logo {
-    transform: scale(1);
-    top: 10%;
-    left: 21%;
-    width: 250px;
-    height: 200px;
-  }
-
-  #logo-border {
-    top: 6%;
-    left: 16%;
-    width: 260px;
-    height: 190px;
-  }
-
-  #csgo-button {
-    top: 43%;
-    left: -2%;
-    width: 200px;
-    height: 50px;
-  }
-
-  #dota2-button {
-    top: 52%;
-    left: -2%;
-    width: 200px;
-    height: 50px;
-  }
-
-  #fortnite-button {
-    top: 61%;
-    left: -2%;
-    width: 200px;
-    height: 50px;
-  }
-
-  #valorant-button {
-    top: 70%;
-    left: -2%;
-    width: 200px;
-    height: 50px;
-  }
-
-  #league-button {
-    top: 79%;
-    left: -2%;
-    width: 200px;
-    height: 50px;
-  }
-}
-
-@media (min-width: 380px) and (max-width: 480px) {
-  #circle {
-    width: 55px;
-    height: 55px;
-  }
-
-  #inner-circle {
-    font-size: 18px;
-  }
-
-  #high-score {
-    font-size: 17px;
-  }
-
-  #score {
-    font-size: 17px;
-  }
-
-  #left-name {
-    font-size: 25px;
-    top: 19vh;
-    left: 50%;
-    white-space: nowrap;
-  }
-
-  #left-has {
-    font-size: 12px;
-    top: 23vh;
-    left: 50%;
-  }
-
-  #left-earnings {
-    font-size: 40px;
-    top: 25vh;
-    left: 50%;
-  }
-
-  #left-bottom-text {
-    font-size: 14px;
-    top: 32vh;
-    left: 50%;
-  }
-
-  #right-name {
-    font-size: 25px;
-    top: 65vh;
-    right: 50%;
-    white-space: nowrap;
-  }
-
-  #right-has {
-    font-size: 12px;
-    top: 69vh;
-    right: 50%;
-  }
-
-  #right-earnings {
-    font-size: 50px;
-    top: 71vh;
-    right: 50%;
-  }
-
-  #right-bottom-text {
-    font-size: 14px;
-    top: 81vh;
-    right: 50%;
-  }
-
-  #higher-button {
-    width: 100px;
-    height: 35px;
-    font-size: 0.8rem;
-    top: 71vh;
-    right: 50%;
-  }
-
-  #lower-button {
-    width: 100px;
-    height: 35px;
-    font-size: 0.8rem;
-    top: 76vh;
-    right: 50%;
-  }
-
-  #game-over {
-    font-size: 13px;
-    transform: translateX(5%);
-    top: 46%;
-    left: 70%;
-  }
-
-  #game-over-score {
-    font-size: 13px;
-    top: 48%;
-    left: 70%;
-  }
-
-  #try-again {
-    width: 120px;
-    height: 35px;
-    top: 51%;
-    left: 50%;
-    font-size: 0.8rem;
-  }
-
-  #left-panel {
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 50vh;
-    filter: blur(1px);
-  }
-
-  #right-panel {
-    top: 50vh;
-    left: 0px;
-    width: 100%;
-    height: 50vh;
-    filter: blur(1px);
-  }
-
-  #fire-animation {
-    transform: scale(0.1);
-    bottom: -4%;
-    right: -11%;
-  }
-
-  #logo {
-    transform: scale(1);
-    top: 10%;
-    left: 22.5%;
-    width: 250px;
-    height: 200px;
-  }
-
-  #logo-border {
-    top: 7%;
-    left: 18%;
-    width: 260px;
-    height: 190px;
-  }
-
-  #csgo-button {
-    top: 43%;
-    left: 0%;
-    width: 200px;
-    height: 60px;
-  }
-
-  #dota2-button {
-    top: 52%;
-    left: 0%;
-    width: 200px;
-    height: 60px;
-  }
-
-  #fortnite-button {
-    top: 61%;
-    left: 0%;
-    width: 200px;
-    height: 60px;
-  }
-
-  #valorant-button {
-    top: 70%;
-    left: 0%;
-    width: 200px;
-    height: 60px;
-  }
-
-  #league-button {
-    top: 79%;
-    left: 0%;
-    width: 200px;
-    height: 60px;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 768px) {
-  #circle {
-    width: 50px;
-    height: 50px;
-  }
-
-  #inner-circle {
-    font-size: 18px;
-  }
-
-  #high-score {
-    font-size: 17px;
-  }
-
-  #score {
-    font-size: 17px;
-  }
-
-  #left-name {
-    font-size: 20px;
-    top: 20vh;
-    left: 50%;
-    white-space: nowrap;
-  }
-
-  #left-has {
-    font-size: 10px;
-    top: 23vh;
-    left: 50%;
-  }
-
-  #left-earnings {
-    font-size: 35px;
-    top: 25vh;
-    left: 50%;
-  }
-
-  #left-bottom-text {
-    font-size: 10px;
-    top: 31vh;
-    left: 50%;
-  }
-
-  #right-name {
-    font-size: 15px;
-    top: 65vh;
-    right: 50%;
-    white-space: nowrap;
-  }
-
-  #right-has {
-    font-size: 10px;
-    top: 68vh;
-    right: 50%;
-  }
-
-  #right-earnings {
-    font-size: 40px;
-    top: 70vh;
-    right: 50%;
-  }
-
-  #right-bottom-text {
-    font-size: 10px;
-    top: 78vh;
-    right: 50%;
-  }
-
-  #higher-button {
-    width: 100px;
-    height: 30px;
-    font-size: 0.8rem;
-    top: 70vh;
-    right: 50%;
-  }
-
-  #lower-button {
-    width: 100px;
-    height: 30px;
-    font-size: 0.8rem;
-    top: 74vh;
-    right: 50%;
-  }
-
-  #game-over {
-    font-size: 14px;
-    transform: translateX(5%);
-    top: 44.5%;
-    left: 70%;
-  }
-
-  #game-over-score {
-    font-size: 14px;
-    top: 47%;
-    left: 70%;
-  }
-
-  #try-again {
-    width: 120px;
-    height: 40px;
-    top: 51%;
-    left: 55%;
-    font-size: 0.8rem;
-  }
-
-  #left-panel {
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 50vh;
-    filter: blur(1px);
-  }
-
-  #right-panel {
-    top: 50vh;
-    left: 0px;
-    width: 100%;
-    height: 50vh;
-    filter: blur(1px);
-  }
-
-  #fire-animation {
-    transform: scale(0.2);
-    bottom: -4%;
-    right: -12%;
-  }
-
-  #logo {
-    transform: scale(1.2);
-    top: 10%;
-    left: 30%;
-    width: 250px;
-    height: 200px;
-  }
-
-  #logo-border {
-    top: 5%;
-    left: 22%;
-    width: 310px;
-    height: 210px;
-  }
-
-  #csgo-button {
-    top: 43%;
-    left: 13%;
-    width: 200px;
-    height: 60px;
+@media (max-width: 768px) {
+  .scoreboard {
+    font-size: 1.2rem;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 
-  #dota2-button {
-    top: 52%;
-    left: 13%;
-    width: 200px;
-    height: 60px;
+  .panel-container {
+    flex-direction: column;
+    gap: 15px;
   }
 
-  #fortnite-button {
-    top: 61%;
-    left: 13%;
-    width: 200px;
-    height: 60px;
+  .player-panel {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
-  #valorant-button {
-    top: 70%;
-    left: 13%;
-    width: 200px;
-    height: 60px;
+  .player-name {
+    font-size: 1rem;
   }
 
-  #league-button {
-    top: 79%;
-    left: 13%;
-    width: 200px;
-    height: 60px;
+  .player-earnings {
+    font-size: 1.2rem;
   }
-}
 
-@media (min-width: 768px) and (max-width: 1000px) {
-  #circle {
+  .vs-circle {
     width: 70px;
     height: 70px;
+    font-size: 1rem;
   }
 
-  #inner-circle {
-    font-size: 22px;
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  #high-score {
-    font-size: 20px;
-  }
-
-  #score {
-    font-size: 20px;
-  }
-
-  #left-name {
-    font-size: 35px;
-    top: 18vh;
-    left: 50%;
-    white-space: nowrap;
-  }
-
-  #left-has {
-    font-size: 15px;
-    top: 22vh;
-    left: 50%;
-  }
-
-  #left-earnings {
-    font-size: 50px;
-    top: 23vh;
-    left: 50%;
-  }
-
-  #left-bottom-text {
-    font-size: 15px;
-    top: 28vh;
-    left: 50%;
-  }
-
-  #right-name {
-    font-size: 35px;
-    top: 65vh;
-    right: 50%;
-    white-space: nowrap;
-  }
-
-  #right-has {
-    font-size: 15px;
-    top: 68vh;
-    right: 50%;
-  }
-
-  #right-earnings {
-    font-size: 60px;
-    top: 70vh;
-    right: 50%;
-  }
-
-  #right-bottom-text {
-    font-size: 15px;
-    top: 78vh;
-    right: 50%;
-  }
-
-  #higher-button {
-    width: 130px;
-    height: 45px;
-    font-size: 0.8rem;
-    top: 70vh;
-    right: 50%;
-  }
-
-  #lower-button {
-    width: 130px;
-    height: 45px;
-    font-size: 0.8rem;
-    top: 74vh;
-    right: 50%;
-  }
-
-  #game-over {
-    font-size: 15px;
-    transform: translateX(5%);
-    top: 47%;
-    left: 71.5%;
-  }
-
-  #game-over-score {
-    font-size: 15px;
-    top: 49%;
-    left: 71.5%;
-  }
-
-  #try-again {
-    width: 130px;
-    height: 45px;
-    top: 51%;
-    left: 60%;
-    font-size: 0.8rem;
-  }
-
-  #left-panel {
-    top: 0px;
-    left: 0px;
+  .action-button {
     width: 100%;
-    height: 50vh;
+    font-size: 1rem;
   }
 
-  #right-panel {
-    top: 50vh;
-    left: 0px;
-    width: 100%;
-    height: 50vh;
-  }
-
-  #fire-animation {
-    transform: scale(0.1);
-    bottom: -2.5%;
-    right: -5%;
-  }
-
-  #logo {
-    transform: scale(1.4);
-    top: 13%;
-    left: 37%;
-    width: 250px;
-    height: 200px;
-  }
-
-  #logo-border {
-    top: 6%;
-    left: 27%;
-    width: 370px;
-    height: 270px;
-  }
-
-  #csgo-button {
-    top: 43%;
-    left: 23%;
-    width: 220px;
-    height: 65px;
-  }
-
-  #dota2-button {
-    top: 52%;
-    left: 23%;
-    width: 220px;
-    height: 65px;
-  }
-
-  #fortnite-button {
-    top: 61%;
-    left: 23%;
-    width: 220px;
-    height: 65px;
-  }
-
-  #valorant-button {
-    top: 70%;
-    left: 23%;
-    width: 220px;
-    height: 65px;
-  }
-
-  #league-button {
-    top: 79%;
-    left: 23%;
-    width: 220px;
-    height: 65px;
+  .game-over-container {
+    max-width: 300px;
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1280px) {
-  #circle {
-    width: 80px;
-    height: 80px;
+@media (max-width: 480px) {
+  .panel-container {
+    flex-direction: column;
+    gap: 15px;
   }
 
-  #inner-circle {
-    font-size: 25px;
-  }
-
-  #high-score {
-    font-size: 25px;
-  }
-
-  #score {
-    font-size: 25px;
-  }
-
-  #left-name {
-    font-size: 35px;
-    top: 15vh;
-    left: 50%;
-    white-space: nowrap;
-  }
-
-  #left-has {
-    font-size: 18px;
-    top: 19vh;
-    left: 50%;
-  }
-
-  #left-earnings {
-    font-size: 55px;
-    top: 21vh;
-    left: 50%;
-  }
-
-  #left-bottom-text {
-    font-size: 20px;
-    top: 27vh;
-    left: 50%;
-  }
-
-  #right-name {
-    font-size: 35px;
-    top: 62vh;
-    right: 50%;
-    white-space: nowrap;
-  }
-
-  #right-has {
-    font-size: 20px;
-    top: 66vh;
-    right: 50%;
-  }
-
-  #right-earnings {
-    font-size: 65px;
-    top: 69vh;
-    right: 50%;
-  }
-
-  #right-bottom-text {
-    font-size: 20px;
-    top: 79vh;
-    right: 50%;
-  }
-
-  #higher-button {
-    width: 140px;
-    height: 50px;
-    font-size: 1rem;
-    top: 69vh;
-    right: 50%;
-  }
-
-  #game-over {
-    font-size: 20px;
-    transform: translateX(5%);
-    top: 46%;
-    left: 71%;
-  }
-
-  #game-over-score {
-    font-size: 20px;
-    top: 48%;
-    left: 71%;
-  }
-
-  #try-again {
-    width: 140px;
-    height: 50px;
-    top: 51%;
-    left: 63%;
-    font-size: 1rem;
-  }
-
-  #lower-button {
-    width: 140px;
-    height: 50px;
-    font-size: 1rem;
-    top: 74vh;
-    right: 50%;
-  }
-
-  #left-panel {
-    top: 0px;
-    left: 0px;
+  .player-panel {
+    height: 250px;
     width: 100%;
-    height: 50vh;
-    filter: blur(1px);
   }
 
-  #right-panel {
-    top: 50vh;
-    left: 0px;
-    width: 100%;
-    height: 50vh;
-    filter: blur(1px);
+  .vs-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 0.8rem;
   }
 
-  #fire-animation {
-    transform: scale(0.2);
-    bottom: -3%;
-    right: -4%;
-  }
-
-  #logo {
-    top: 13%;
-    left: 42%;
-    width: 250px;
-    height: 200px;
-  }
-
-  #logo-border {
-    top: 3%;
-    left: 27.5%;
-  }
-
-  #csgo-button {
-    top: 43%;
-    left: 27%;
-  }
-
-  #dota2-button {
-    top: 52%;
-    left: 27%;
-  }
-
-  #fortnite-button {
-    top: 61%;
-    left: 27%;
-  }
-
-  #valorant-button {
-    top: 70%;
-    left: 27%;
-  }
-
-  #league-button {
-    top: 79%;
-    left: 27%;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1920px) {
-  #circle {
-    width: 80px;
-    height: 80px;
-  }
-
-  #inner-circle {
-    font-size: 25px;
-  }
-
-  #high-score {
-    font-size: 25px;
-  }
-
-  #score {
-    font-size: 25px;
-  }
-
-  #left-name {
-    font-size: 40px;
-  }
-
-  #left-has {
-    font-size: 20px;
-    top: 44vh;
-  }
-
-  #left-earnings {
-    font-size: 70px;
-    top: 47vh;
-  }
-
-  #left-bottom-text {
-    font-size: 20px;
-    top: 55vh;
-  }
-
-  #right-name {
-    font-size: 40px;
-  }
-
-  #right-has {
-    font-size: 20px;
-    top: 44vh;
-  }
-
-  #right-earnings {
-    font-size: 80px;
-    top: 47vh;
-  }
-
-  #right-bottom-text {
-    font-size: 20px;
-    top: 58vh;
-  }
-
-  #higher-button {
-    top: 47vh;
-  }
-
-  #lower-button {
-    top: 53vh;
-  }
-
-  #game-over {
-    top: 65%;
-    left: 46%;
-  }
-
-  #game-over-score {
-    top: 67%;
-    left: 46%;
-  }
-
-  #try-again {
-    top: 70%;
-    left: 33%;
-  }
-
-  #left-panel {
-    filter: blur(1px);
-  }
-
-  #right-panel {
-    filter: blur(1px);
-  }
-
-  #fire-animation {
-    transform: scale(0.2);
-    bottom: -3%;
-    right: -2.5%;
-  }
-
-  #logo {
-    top: 23%;
-    left: 50%;
-  }
-
-  #logo-border {
-    top: 4%;
-    left: 33%;
-  }
-
-  #csgo-button {
-    top: 43%;
-    left: 33%;
-  }
-
-  #dota2-button {
-    top: 52%;
-    left: 33%;
-  }
-
-  #fortnite-button {
-    top: 61%;
-    left: 33%;
-  }
-
-  #valorant-button {
-    top: 70%;
-    left: 33%;
-  }
-
-  #league-button {
-    top: 79%;
-    left: 33%;
+  .retry-button {
+    font-size: 1rem;
   }
 }
